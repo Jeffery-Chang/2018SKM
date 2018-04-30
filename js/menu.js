@@ -7,9 +7,9 @@
     fjs.parentNode.insertBefore(js, fjs);
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : '142220039665931',
+            appId      : '1423502524421148',
             xfbml      : true,
-            version    : 'v2.9'
+            version    : 'v2.12'
         });
     };
 }(document, 'script', 'facebook-jssdk'));
@@ -150,7 +150,7 @@ var menuCtrl = {
     googleLogin: function(obj){
         gapi.load("auth2", () => {
             var auth2 = gapi.auth2.init({
-                clientId: "704654834388-ta2hrensur0tun55pajn8md8ht02rs2s.apps.googleusercontent.com"
+                clientId: "704654834388-3cclus6faj1vg3p9lenfdrd8pkbtq2gt.apps.googleusercontent.com"
             });
 
             // 串接G+登入按鈕
