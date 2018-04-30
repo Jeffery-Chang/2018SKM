@@ -1,0 +1,42 @@
+{
+    "jscompiler": {
+        "outputs": [
+            {
+                "inputs": [
+                    "js/menu.js"
+                ],
+                "output": "bundle/menu.js",
+                "generateMap": false,
+                "mangle": true,
+                "isolate": false
+            },
+            {
+                "inputs": [
+                    "js/index.js"
+                ],
+                "output": "bundle/index.js",
+                "generateMap": false,
+                "mangle": true,
+                "isolate": false
+            },
+            {
+                "inputs": [
+                    "js/general.js"
+                ],
+                "output": "bundle/general.js",
+                "generateMap": false,
+                "mangle": true,
+                "isolate": false
+            },
+            {
+                "inputs": [
+                    "js/data.js"
+                ],
+                "output": "bundle/data.js",
+                "generateMap": false,
+                "mangle": true,
+                "isolate": false
+            }
+        ]
+    }
+}

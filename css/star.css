@@ -1,0 +1,193 @@
+.main .meteor span{
+    opacity: 0;
+}
+.main .meteor span.one {
+    animation: star-ani 1.5s infinite ease-out;
+    animation-delay: 1.5s;
+}
+.main .meteor span.two {
+    animation: star-ani 1.75s infinite ease-out;
+    animation-delay: 2s;
+}
+.main .meteor span.three {
+    animation: star-ani 2.5s infinite ease-out;
+}
+.main .meteor span.four {
+    animation: star-ani 3s infinite ease-out;
+    animation-delay: 2s;
+}
+@keyframes star-ani {
+    0% {
+        opacity: 0;
+        transform: scale(.5) rotate(-30deg) translate3d(0, 0, 0);
+        -webkit-transform: scale(.5) rotate(-30deg) translate3d(0, 0, 0);
+        -moz-transform: scale(.5) rotate(-30deg) translate3d(0, 0, 0);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate(-30deg) translate3d(-250px, 5px, 0);
+        -webkit-transform: scale(1) rotate(-30deg) translate3d(-250px, 5px, 0);
+        -moz-transform: scale(1) rotate(-30deg) translate3d(-250px, 5px, 0);
+    }
+}
+header nav{
+    z-index: 700;
+    top: 49px;
+}
+@media screen and (max-width: 600px) {
+    header nav:before {
+        content: "";
+        background: #c81f25;
+        margin-top: -48px;
+        width: 110px;
+        height: 40px;
+        display: block;
+    }
+    header nav ul{
+        top: 38%;
+    }
+    header nav{
+        position: absolute;
+        height: 100vh;
+    }
+    .pop{
+        height: inherit;
+    }
+    .pop.login {
+        height: auto;
+    }
+}
+.bottom_sha{
+    z-index: 500;
+}
+.none{
+    display: none;
+}
+.gRobots{
+    position: relative;
+    top: -13px;
+    margin-bottom: -30px;
+}
+.g-recaptcha div{
+    margin: 40px auto;
+}
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: url(../img/star.gif);
+}
+.pop, .warn{
+    position: fixed;
+    z-index: 750;
+}
+
+
+
+
+.part2 {
+    opacity: 0;
+}
+.index .flyman.move{
+    animation: move-ani 2.5s infinite ease-out;
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    -ms-filter: brightness(70%);
+    -o-filter: brightness(70%);
+}
+.index .part2 .flyman {
+    z-index: 281;
+}
+@keyframes move-ani {
+    0% {
+        transform: scale(.85)translate3d(0, 0, 0);
+        -webkit-transform: scale(.85) translate3d(0, 0, 0);
+        -moz-transform: scale(.85) translate3d(0, 0, 0);
+    }
+    40% {
+        transform: scale(.85) translate3d(0, 30px, 0);
+        -webkit-transform: scale(.85) translate3d(0, 30px, 0);
+        -moz-transform: scale(.85) translate3d(0, 30px, 0);
+    }
+    100% {
+        transform: scale(.85) translate3d(0, 0, 0);
+        -webkit-transform: scale(.85) translate3d(0, 0, 0);
+        -moz-transform: scale(.85) translate3d(0, 0, 0);
+    }
+}
+.index section.part1 {
+	z-index: 599;
+}
+.index .planetBox{
+    position: absolute;
+    width: 100%;
+    margin-top: 1%;
+}
+.index .roundabout-holder {
+    position: absolute;
+    list-style: none;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 250vh;
+    margin-left: -150%;
+    margin-top: -25vh;
+}
+@media screen and (max-width: 1200px) {
+    .index .roundabout-holder {
+        width: 320%;
+        margin-left: -160%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .index .roundabout-holder {
+        width: 600%;
+        margin-left: -300%;
+    }
+}
+.vote section .vote_box {
+    box-sizing: content-box;
+    padding: 10px 0;
+}
+.vote .store_list .name{
+    z-index: 699;
+}
+.vote .final_check p.read {
+    position: relative;
+    z-index: 760;
+}
+.wrap .index .part2.vote .slick *{
+    text-decoration: none; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+}
+.general .voteRepeat{
+    display: inline-block;
+}
+
+.avtivity .br{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .avtivity .br{
+        display: block;
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s
+}
+.fade-enter, .fade-leave-to{
+    opacity: 0
+}
