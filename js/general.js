@@ -231,7 +231,7 @@ $(function(){
             getVote: function(evt, inn){
                 menuCtrl.preventAll(evt);
 
-                if(!menuCtrl.timesUp()){
+                if(menuCtrl.timesUp()){
                     alert('此投票活動已結束，感謝您的熱情參與！');
                     return;
                 }
@@ -252,7 +252,7 @@ $(function(){
             chkChoose: function(key){
                 var $this = this;
 
-                if(!menuCtrl.timesUp()){
+                if(menuCtrl.timesUp()){
                     alert('此投票活動已結束，感謝您的熱情參與！');
                     return;
                 }
@@ -290,7 +290,7 @@ $(function(){
                 var $this = this;
                 if(!$.cookie('choose1') || !$.cookie('choose2') || !$.cookie('choose3')) return;
                 
-                if(!menuCtrl.timesUp()){
+                if(menuCtrl.timesUp()){
                     alert('此投票活動已結束，感謝您的熱情參與！');
                     return;
                 }

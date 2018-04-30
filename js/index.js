@@ -50,6 +50,7 @@ var indexCtrl = {
             $(".dropdown dd ul").slideToggle('fast');
         });
 
+        // 分店下拉
         $(".dropdown dd ul li").on('click', function(e) {
             menuCtrl.preventAll(e);
             var storeNM = $(this).find('a').text();
@@ -65,15 +66,16 @@ var indexCtrl = {
             $this.outStage();
         });*/
 
+        // 開始按鈕
         startBtn.click(function(e) {
             menuCtrl.preventAll(e);
 
-            if(!menuCtrl.timeLimit()){
+            if(!menuCtrl.timeStart()){
                 alert('現在投票還沒有開始喔！\n\n請於\n106年 8月  7日（一）11:00～\n106年 8月20日（日）23:59\n\n蒞臨本站一天一票，支持您心目中的候選人！');
                 return;
             }
 
-            if(!menuCtrl.timesUp()){
+            if(menuCtrl.timesUp()){
                 alert('此投票活動已結束，感謝您的熱情參與！');
                 return;
             }
@@ -336,7 +338,7 @@ var indexCtrl = {
             var index = $(this).data('index');
             var type = $(this).data('type');
 
-            if(!menuCtrl.timesUp()){
+            if(menuCtrl.timesUp()){
                 alert('此投票活動已結束，感謝您的熱情參與！');
                 return;
             }
@@ -361,7 +363,7 @@ var indexCtrl = {
             if($(this).hasClass('no')) return;
             popupOpen = true;
 
-            if(!menuCtrl.timesUp()){
+            if(menuCtrl.timesUp()){
                 alert('此投票活動已結束，感謝您的熱情參與！');
                 return;
             }
@@ -493,7 +495,7 @@ var indexCtrl = {
             var index = $(this).data('index');
             var type = $(this).data('type');
 
-            if(!menuCtrl.timesUp()){
+            if(menuCtrl.timesUp()){
                 alert('此投票活動已結束，感謝您的熱情參與！');
                 return;
             }
@@ -523,7 +525,7 @@ var indexCtrl = {
     checkChoose: function(num, tp){
         var $this = this;
 
-        if(!menuCtrl.timesUp()){
+        if(menuCtrl.timesUp()){
             alert('此投票活動已結束，感謝您的熱情參與！');
             return;
         }      

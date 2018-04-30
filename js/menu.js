@@ -16,50 +16,37 @@
 
 var menuCtrl = {
     init: function(){
-        var $this = this;
-
         if(location.href.indexOf('https') == -1){
-            $this.chkProtocol();
+            this.chkProtocol();
         }
 
-        if($this.chkIE8() === 'IE8'){
+        if(this.chkIE8() === 'IE8'){
             location.href = 'ie8/';
             return;
         }
 
-        $('header nav li').eq(3).removeClass('none');
-        if(this.timeLimit()) $this.menuSet();
-        $this.resize();
-        $this.starSet();
+        if(menuCtrl.timesUp()) $('header nav li').eq(3).removeClass('none');
+        if(this.timeStart()) this.menuSet();
+        this.resize();
+        this.starSet();
         if(menuCtrl.chkWebview()) $('.warn').show();
 
-        $(window).on('resize', function(){
-            $this.resize();
-            $this.starSet();
+        $(window).on('resize', () => {
+            this.resize();
+            this.starSet();
         });
     },
-    timeLimit: function(){
-        var startTime = new Date('August 07 2017, 11:00:00');
-        var nowTime = new Date();
-        var startFG = false;
-
-        if(nowTime >= startTime){
-            startFG = true;
-        }
-
-        startFG = true;
-
-        return startFG;
+    timeStart: function(){
+        var endTime = Date.parse('2018/04/30 00:00:00').valueOf();
+        var nowTime = Date.parse(new Date()).valueOf();
+        var result = nowTime >= endTime;
+        return result;
     },
     timesUp: function(){
-        var endTime = new Date('August 20 2017, 23:59:59');
-        var nowTime = new Date();
-        var endFG = true;
-        if(nowTime > endTime){
-            endFG = false;
-        }
-
-        return endFG;
+        var endTime = Date.parse('2018/06/20 00:00:00').valueOf();
+        var nowTime = Date.parse(new Date()).valueOf();
+        var result = nowTime >= endTime;
+        return result;
     },
     menuSet: function(){
         var $this = this;
@@ -99,7 +86,7 @@ var menuCtrl = {
                     gaclick('menu_gshare');
                     $this.shareGplus();
                     break;
-                             }
+            }
         });
     },
     starSet: function(){
@@ -131,8 +118,7 @@ var menuCtrl = {
         event.preventDefault();
     },
     fbLogin: function(obj){
-        var $this = this;
-        if (obj !== void 0) obj.click(function(e){ $this.preventAll(e); });
+        if (obj !== void 0) obj.click((e) => { this.preventAll(e); });
 
         gaclick('login_fb');
 
@@ -162,15 +148,14 @@ var menuCtrl = {
         );
     },
     googleLogin: function(obj){
-        var $this = this;
-        gapi.load("auth2", function(){
+        gapi.load("auth2", () => {
             var auth2 = gapi.auth2.init({
                 clientId: "704654834388-ta2hrensur0tun55pajn8md8ht02rs2s.apps.googleusercontent.com"
             });
 
             // 串接G+登入按鈕
-            obj.on('click', function(e){
-                $this.preventAll(e);
+            obj.on('click', (e) => {
+                this.preventAll(e);
 
                 gaclick('login_google');
 
@@ -192,8 +177,7 @@ var menuCtrl = {
         });
     },
     shareFB: function(){
-        var $this = this;
-        var fb_url = ($this.chkDevice()) ? 'http://m.facebook.com/sharer.php?u=' : 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=';
+        var fb_url = (this.chkDevice()) ? 'http://m.facebook.com/sharer.php?u=' : 'http://www.facebook.com/sharer.php?u=';
         var fbBack_url = '?fb_back=1';
         var share_u;
         share_u = location.href + fbBack_url;
@@ -208,7 +192,7 @@ var menuCtrl = {
     },
     sendData: function(cb){
         if (cb === void 0) { cb = null; };
-        if(!menuCtrl.timesUp()){
+        if(menuCtrl.timesUp()){
             alert('此投票活動已結束，感謝您的熱情參與！\n\n活動將於106年9月4日(一)抽獎\n得獎通知將於106年9月8日(五)以E-MAIL寄發通知\n\n請您密切注意，謝謝。');
             return;
         }
@@ -316,7 +300,7 @@ var menuCtrl = {
     chkProtocol: function(){
         var myUrl = location.href;
         myUrl = (myUrl) ? myUrl.replace('http', 'https') : location.href;
-        if(location.hostname != '127.0.0.1') location.href = myUrl;
+        if(location.hostname != '192.168.123.30' && location.hostname != 'cell.webgene.com.tw') location.href = myUrl;
     }
 }
 
