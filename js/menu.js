@@ -14,6 +14,7 @@
     };
 }(document, 'script', 'facebook-jssdk'));
 
+var resizeFG = false;
 var menuCtrl = {
     init: function(){
         if(location.href.indexOf('https') == -1){

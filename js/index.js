@@ -28,7 +28,6 @@ var wheelPos = "top";
 var fb_login = ($.cookie('fb_login')) ? true : false;
 var gplus_login = ($.cookie('gplus_login')) ? true : false;
 var popupOpen = false;
-var resizeFG = false;
 var innerFG = false;
 
 var store_fg = false;
