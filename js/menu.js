@@ -301,7 +301,7 @@ var menuCtrl = {
     chkProtocol: function(){
         var myUrl = location.href;
         myUrl = (myUrl) ? myUrl.replace('http', 'https') : location.href;
-        if(location.hostname != '192.168.123.30' && location.hostname != 'cell.webgene.com.tw') location.href = myUrl;
+        if(location.hostname != '192.168.123.30' && location.hostname != '192.168.123.21' && location.hostname != 'cell.webgene.com.tw') location.href = myUrl;
     }
 }
 
