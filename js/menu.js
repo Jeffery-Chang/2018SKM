@@ -26,7 +26,7 @@ var menuCtrl = {
             return;
         }
 
-        if(menuCtrl.timesUp()) $('header nav li').eq(3).removeClass('none');
+        if(menuCtrl.timesUp()) $('header nav li').eq(4).removeClass('none');
         if(this.timeStart()) this.menuSet();
         this.resize();
         this.starSet();
@@ -44,7 +44,7 @@ var menuCtrl = {
         return result;
     },
     timesUp: function(){
-        var endTime = Date.parse('2018/06/20 00:00:00').valueOf();
+        var endTime = Date.parse('2018/04/20 00:00:00').valueOf();
         var nowTime = Date.parse(new Date()).valueOf();
         var result = nowTime >= endTime;
         return result;
@@ -77,13 +77,16 @@ var menuCtrl = {
                     trackWaitJump('menu_votelist', 'general.html');
                     break;
                 case 3:
-                    trackWaitJump('', 'award.html');
+                    trackWaitJump('', 'tvc.html');
                     break;
                 case 4:
+                    trackWaitJump('', 'award.html');
+                    break;
+                case 5:
                     gaclick('menu_fbshare');
                     $this.shareFB();
                     break;
-                case 5:
+                case 6:
                     gaclick('menu_gshare');
                     $this.shareGplus();
                     break;
@@ -301,7 +304,8 @@ var menuCtrl = {
     chkProtocol: function(){
         var myUrl = location.href;
         myUrl = (myUrl) ? myUrl.replace('http', 'https') : location.href;
-        if(location.hostname != '192.168.123.30' && location.hostname != '192.168.123.21' && location.hostname != 'cell.webgene.com.tw') location.href = myUrl;
+        /* 2018-05-08 更新不是正式站不用導https */
+        if(location.hostname == 'smileangel.skm.com.tw') location.href = myUrl;
     }
 }
 

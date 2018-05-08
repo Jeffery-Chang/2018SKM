@@ -1,11 +1,11 @@
-// div width & height
 @charset "UTF-8";
+// div width & height
 @mixin box($w, $h, $bg) {
     width: $w;
     height: $h;
     background-color: $bg;
     margin: 0 auto;
-    box-sizing:border-box;
+    @include box-sizing;
 }
 
 // image scale with box
@@ -25,14 +25,9 @@
 
 // viaticle middle
 @mixin vm {
-    &:before {
-        content: '';
-        width: 0;
-        height: 100%;
-        display: inline-block;
-        position: relative;
-        vertical-align: middle;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // clear float
@@ -56,15 +51,12 @@
     @include translate(-50%, -50%);
 }
 
-// word writing_vertical-rl
+
 @mixin text-pretty {
-    // ie only
-    writing-mode: tb-rl;
-    // other browser
-    -moz-writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 //absl
@@ -84,12 +76,42 @@
     filter: blur($unit);
 }
 
+@mixin btn($btnw, $btnh) {
+    @include box($btnw, $btnh, null);
+    display: block;
+    position: relative;
+    cursor: pointer;
+    .shape {
+        stroke-dasharray: 0 500;
+        stroke-dashoffset: 20;
+        stroke-width: 3px;
+        fill: transparent;
+        stroke: white;
+        transition: stroke-width 2.7s, stroke-dashoffset 2.7s, stroke-dasharray 1.3s;
+        transition-delay: 0s;
+    }
+    .shape_border {
+        stroke-width: 3px;
+        stroke-dasharray: 100 8;
+        stroke-dashoffset: 20;
+    }
+    span {
+        @include allcenter;
+    }
+    &:hover {
+        svg {
+            .shape {
+                stroke-dasharray: 0 500;
+            }
+        }
+    }
+}
+
 //btn
 %btnStyle {
     display: block;
     @include box(189px, 35px, null);
     position: relative;
-    margin-top: 25px;
     svg {
         @include scale(1.4);
     }
@@ -112,3 +134,27 @@
         @include allcenter;
     }
 }
+
+//brightness
+@mixin brightness($unit) {
+    filter: brightness($unit);
+    -webkit-filter: brightness($unit);
+    -moz-filter: brightness($unit);
+    -ms-filter: brightness($unit);
+    -o-filter: brightness($unit);
+}
+//gray
+@mixin grayscale($unit){
+    filter:grayscale($unit);
+    -webkit-filter:grayscale($unit);
+    -moz-filter:grayscale($unit);
+    -ms-filter:grayscale($unit);
+    -o-filter:grayscale($unit);
+}
+//transform all
+@mixin simple-transform($scale: false, $rotate: false, $trans-x: false, $trans-y: false, $skew-x: false, $skew-y: false, $origin-x: false, $origin-y: false) {
+  @include create-transform(false, $scale, $scale, false, false, false, $rotate, false, $trans-x, $trans-y, false, $skew-x, $skew-y, $origin-x, $origin-y, false, false);
+}
+
+
+

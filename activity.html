@@ -61,7 +61,7 @@
             </div>
         </div>
         <!-- navigation -->
-        <header style="opacity: 0;">
+        <header class="opacity">
             <p><img src="asset/svg/logo.svg" alt=""></p>
             <div href="" class="menu">
                 <a href=""></a>
@@ -71,13 +71,14 @@
                     <li><a href="">活動首頁</a></li>
                     <li><a href="">活動辦法</a></li>
                     <li><a href="">立即投票</a></li>
+                    <li><a href="">新星片花</a></li>
                     <li class="none"><a href="">得獎名單</a></li>
                     <li class="social"><a href=""><span class="icon-facebook"></span></a></li>
                     <li class="social"><a href=""><span class="icon-google"></span></a></li>
                 </ul>
             </nav>
         </header>
-        <div class="wrap" style="opacity: 0;">
+        <div class="wrap opacity">
             <div class="main general avtivity">
                 <!-- 其他物件 -->
                 <div class="fixed">
@@ -177,12 +178,11 @@
                 <p>建議使用Safari或Chrome瀏覽網頁，<br>以利活動參與。</p>
             </div>
         </div>
-        <script src="bundle/menu.js?v=20170905"></script>
+        <script src="bundle/menu.js"></script>
         <script>
             $(function(){
                 $(window).on('load', function(){
-                    if(menuCtrl.timesUp()) $('header nav li').eq(3).removeClass('none');
-                    $('header, .wrap').css('opacity', 1);
+                    $('header, .wrap').removeClass('opacity');
                     $('.loading').delay(500).fadeOut('fast', function(){
                         var hash = location.hash;
                         if(hash === '#auth'){

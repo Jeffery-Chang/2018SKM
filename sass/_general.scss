@@ -1,0 +1,248 @@
+@charset "UTF-8";
+.general {
+    .bottom_sha {
+        z-index: 500;
+    }
+    .progress {
+        bottom: 4%;
+        ul {
+            li:first-child {
+                position: relative;
+                a {
+                    span {
+                        @include font-style(26px, 600, $lineheight, $red, $letterspace);
+                    }
+                    .popup {
+                        @include absl(-100px, null, null, 50%);
+                        @include translateX(-50%);
+                        @include box(100px, 80px, $red);
+                        @include border-radius(10px);
+                        padding-top: 12px;
+                        ul {
+                            text-align: left;
+                            margin-left: 13px;
+                            li {
+                                margin: 2px 0;
+                            }
+                        }
+                        &:after {
+                            content: '';
+                            display: inline-block;
+                            width: 0;
+                            height: 0;
+                            border-color: transparent;
+                            border-style: solid;
+                            border-width: 13px 10px 0 9px;
+                            border-top-color: $red;
+                            @include absl(null, null, -10px, 50%);
+                            @include translateX(-50%);
+                        }
+                    }
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        } // i6
+        @media screen and (min-width: 375px) and (max-width: 413px) {
+            li:first-child {
+                a {
+                    .popup {
+                        ul {
+                            @include scale(1.02);
+                            margin-left: -11px;
+                            margin-top: -2px;
+                        }
+                    }
+                }
+            }
+            ul,
+            a.finish {
+                margin: 0 -15px;
+            }
+            ul {
+                @include scale(0.8);
+                margin-left: -25px;
+            }
+            a.finish {
+                @include scale(0.9);
+            }
+        } // i5
+        @media screen and (max-width: 374px) {
+            bottom: 1%;
+            width: 110%;
+            li:first-child {
+                a {
+                    .popup {
+                        ul {
+                            @include scale(1.02);
+                            margin-left: -3px;
+                            margin-top: -1px;
+                        }
+                    }
+                }
+            }
+            ul,
+            a.finish {
+                margin: 0 -5px;
+            }
+            ul {
+                @include scale(0.9);
+                margin-left: -25px;
+            }
+            a.finish {
+                @include scale(1);
+            }
+        }
+    }
+}
+
+.general section {
+    height: auto;
+    padding: 80px 0 300px;
+    h1 {
+        @include box(50%, auto, null);
+        @include img-scale;
+        margin-bottom: 10px;
+    }
+    h2 {
+        padding: 0 40px;
+    }
+    .group {
+        margin: 50px auto;
+        p.topic {
+            @include font-style(22px, 600, $lineheight, $red, $letterspace);
+            position: relative;
+            margin-bottom: 60px;
+            &:after {
+                content: '';
+                display: block;
+                background: url(../asset/svg/linewave.svg) no-repeat center center;
+                @include box(250px, 10px, null);
+                @include absl(null, null, -25px, 50%);
+                @include translateX(-50%);
+            }
+        }
+    }
+    .vote_box {
+        margin: 20px;
+        .con {
+            .top {
+                a.photo {
+                    top: 25px;
+                }
+            }
+            .bottom {
+                margin-top: 28px;
+                h3 {
+                    @include font-style(13px, $weight, $lineheight, #999, $letterspace);
+                }
+            }
+        }
+    } //media
+    @media only screen and (max-width: 600px) {
+        padding-top: 40px;
+        h1 {
+            @include box(80%, auto, null);
+            margin-bottom: 20px;
+        }
+        .vote_box {
+            margin: 0px;
+            @include scale(0.89);
+        }
+    } // i6
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+        .vote_box {
+            margin: -5px -5px;
+            @include scale(0.8);
+        }
+    } //i5
+    @media screen and (max-width: 374px) {
+        .vote_box {
+            margin: 10px;
+            @include scale(0.95);
+        }
+    }
+}
+
+.fixed {
+    @include box(100%, 100%, null);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+/*check box*/
+
+.checkbox-custom,
+.checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkbox-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom-label {
+    position: relative;
+    text-align: left;
+}
+
+.checkbox-custom+.checkbox-custom-label:before {
+    content: '';
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    @include box(22px, 22px, white);
+    @include border-radius(3px);
+    margin-right: 5px;
+}
+
+.checkbox-custom:checked+.checkbox-custom-label:before {
+    content: '';
+    background: white;
+}
+
+.checkbox-custom:checked+.checkbox-custom-label:after {
+    content: '';
+    border: 5px solid $red;
+    border-top: none;
+    border-right: none;
+    @include box(14px, 9px, transparent);
+    @include absl(7px, null, null, 4px);
+    @include rotate(-45deg);
+}
+
+.popup {
+    ul {
+        li.checkbox-active {
+            .checkbox-custom + .checkbox-custom-label:after {
+                content: '';
+                border: 5px solid $red;
+                border-top: none;
+                border-right: none;
+                @include box(14px, 9px, transparent);
+                @include absl(7px, null, null, 4px);
+                @include rotate(-45deg);
+            }
+        }
+    }
+}
+.final_check{
+    .con{
+        p.read{
+            .checkbox-custom+.checkbox-custom-label:before{
+                background-color: #fff;
+                border: 2px $red solid;
+            }
+        }
+    }
+}

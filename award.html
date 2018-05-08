@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -62,7 +61,7 @@
             </div>
         </div>
         <!-- navigation -->
-        <header>
+        <header class="opacity">
             <p><img src="asset/svg/logo.svg" alt=""></p>
             <div href="" class="menu">
                 <a href=""></a>
@@ -72,13 +71,14 @@
                     <li><a href="">活動首頁</a></li>
                     <li><a href="">活動辦法</a></li>
                     <li><a href="">立即投票</a></li>
-                    <li><a href="">得獎名單</a></li>
+                    <li><a href="">新星片花</a></li>
+                    <li class="none"><a href="">得獎名單</a></li>
                     <li class="social"><a href=""><span class="icon-facebook"></span></a></li>
                     <li class="social"><a href=""><span class="icon-google"></span></a></li>
                 </ul>
             </nav>
         </header>
-        <div class="wrap">
+        <div class="wrap opacity">
             <div class="main general avtivity">
                 <!-- 其他物件 -->
                 <div class="fixed">
@@ -121,7 +121,7 @@
         <script>
             $(function(){
                 $(window).on('load', function(){
-                    $('header, .wrap').css('opacity', 1);
+                    $('header, .wrap').removeClass('opacity');
                     $('.loading').delay(500).fadeOut('fast');
                 });
                 

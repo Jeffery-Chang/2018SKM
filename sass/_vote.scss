@@ -1,0 +1,951 @@
+@charset "UTF-8";
+.vote {
+    overflow: hidden;
+    .location_name {
+        @include font-style(16px, $weight, $lineheight, $fontcolor, $letterspace);
+        display: none;
+        text-align: center;
+        padding-top: 30px;
+        span {
+            margin-right: 10px;
+        } //media
+        @media only screen and (max-width: 600px) {
+            display: block;
+        }
+        @media only screen and (max-width: 374px) {
+            @include font-style(14px, $weight, $lineheight, $fontcolor, $letterspace);
+            padding-top: 12px;
+        }
+    }
+    .storeBlock {
+        @include box(1024px, 300px, null);
+        @include absl(null, null, 0%, 50%);
+        @include translateX(-50%);
+        z-index: 1;
+        .flag {
+            @include absl(2%, null, null, 18%);
+            @include box(140px, 155px, null);
+            @include rotate(-23deg);
+            background: url(../asset/svg/flag.svg) no-repeat top center;
+            background-size: contain;
+            padding: 10px 0 0 10px;
+            z-index: 2;
+            p {
+                text-align: center;
+                b {
+                    @include font-style(17px, 600, $lineheight, $fontcolor, $letterspace);
+                    display: block;
+                }
+                @include font-style(15px, $weight, $lineheight, $fontcolor, $letterspace);
+            }
+        }
+        .current_planet {
+            @include absl(null, null, -70%, 50%);
+            @include box(32px, 32px, null);
+            @include translateX(-50%);
+            @include scale(30);
+            svg {
+                @include box(32px, 32px, null);
+            }
+        } // media
+        @media only screen and (max-width: 1024px) {
+            @include absl(null, null, -10%, 50%);
+        }
+        @media only screen and (max-width: 600px) {
+            @include absl(null, null, -18%, 50%); // @include simple-transform($scale: 0.6, $rotate: false, $trans-x: -50%, $trans-y: false, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+            .flag {
+                @include absl(-15%, null, null, 37%);
+                @include simple-transform($scale: 0.8, $rotate: -23deg, $trans-x: -50%, $trans-y: false, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+            }
+            .current_planet {
+                @include absl(null, null, -2%, 50%);
+                @include scale(20);
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .flag {
+                display: none;
+            }
+            .current_planet {
+                @include absl(null, null, -25%, 50%);
+                @include scale(22);
+            }
+        }
+        @media only screen and (max-width: 374px) {
+            .current_planet {
+                @include absl(null, null, -40%, 50%);
+                @include scale(22);
+            }
+        }
+        @media only screen and (max-height: 650px) {
+            @include absl(null, null, -20%, 50%);
+        }
+    }
+    .flyman {
+        @include absl(50%, 20%, null, null);
+        @include brightness(100%); //media
+        @media only screen and (max-width: 1200px) {
+            @include absl(55%, 15%, null, null);
+        }
+        @media only screen and (max-width: 850px) {
+            display: none;
+        }
+    }
+}
+
+.vote section {
+    @include box(700px, 310px, null);
+    @include absl(15%, null, null, 50%);
+    @include translateX(-50%);
+    text-align: center;
+    font-size: 0; //media
+    @media screen and (max-width: 600px) {
+        @include absl(0%, null, null, 50%);
+        padding-top: 90px;
+    } // iphone6
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+        @include absl(0%, null, null, 50%);
+        @include simple-transform($scale: 0.9, $rotate: false, $trans-x: -50%, $trans-y: false, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+    } // iphone5
+    @media screen and (max-width: 374px) {
+        @include absl(0%, null, null, 50%);
+        @include simple-transform($scale: 0.75, $rotate: false, $trans-x: -50%, $trans-y: false, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+        padding-top: 70px;
+    }
+}
+
+.vote_box {
+    @include box(184px, 279px, null);
+    display: inline-block;
+    position: relative;
+    margin: 0 20px;
+    .con {
+        @include box(184px, 279px, white);
+        @include border-radius(92px);
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        .top {
+            @include box(100%, 100px, null);
+            background: url(../asset/svg/wave.svg) repeat-x bottom $red;
+            position: relative;
+            span {
+                @include font-style(15px, $weight, 3.5, $fontcolor, $letterspace);
+            }
+            a.photo {
+                @include box(100px, 100px, white);
+                @include border-radius(100%);
+                @include absl(50px, null, null, 50%);
+                @include translateX(-50%);
+                @include img-scale;
+                overflow: hidden;
+                b {
+                    @include font-style(15px, $weight, $lineheight, $red, $letterspace);
+                    @include allcenter;
+                    @include opacity(0);
+                    @include transition(.5s ease-out);
+                }
+                img {
+                    @include transition(.5s ease-out);
+                    @include scale(1);
+                }
+                &:hover {
+                    b {
+                        @include opacity(1);
+                    }
+                    img {
+                        @include opacity(0.2);
+                        @include scale(1.1);
+                    }
+                }
+            }
+        }
+        .bottom {
+            margin-top: 50px;
+            h2 {
+                @include font-style(18px, 600, $lineheight, black, $letterspace);
+            }
+            p {
+                @include font-style(15px, 400, $lineheight, black, $letterspace);
+            }
+            a.btnVote {
+                @include btn(120px, 40px);
+                cursor: pointer;
+                margin-top: 10px;
+                b {
+                    @include font-style(14px, 400, $lineheight, $red, $letterspace);
+                    padding-right: 5px;
+                }
+                @include font-style(15px, 400, $lineheight, $red, $letterspace);
+                svg {
+                    .shape {
+                        stroke: $red;
+                    }
+                }
+            }
+            a.choose {
+                @include font-style(15px, 400, $lineheight, #666, $letterspace);
+                cursor: default;
+                svg {
+                    path {
+                        fill: #eee;
+                    }
+                }
+            }
+        }
+    }
+    >svg {
+        @include allcenter;
+        z-index: 1;
+        .line {
+            stroke-dasharray: 0 500;
+            stroke-dashoffset: 0;
+            stroke-width: 3px;
+            fill: transparent;
+            stroke: $red;
+            transition: stroke-width 2.7s, stroke-dashoffset 2.7s, stroke-dasharray 1.3s;
+            transition-delay: 0s;
+        }
+        .line_change {
+            stroke-dasharray: 100 8 80 8;
+            stroke-dashoffset: 0;
+            stroke-width: 3px;
+        }
+    }
+}
+
+//進度表
+.progress {
+    @include absl(null, null, 8%, 50%);
+    @include translateX(-50%);
+    @include box(100%, null, null);
+    position: fixed;
+    z-index: 501;
+    text-align: center;
+    ul {
+        display: inline-block;
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 0 15px;
+            @include font-style(15px, 600, $lineheight, white, $letterspace);
+            a {
+                @include box(60px, 60px, white);
+                @include border-radius(100%);
+                border: 5px solid $red;
+                display: block;
+                position: relative;
+                z-index: 2;
+                span {
+                    @include allcenter;
+                    @include font-style(20px, 600, $lineheight, $red, $letterspace);
+                    b {
+                        display: none;
+                    }
+                }
+                span.unfinish {
+                    font-size: 0;
+                    b {
+                        display: block;
+                        text-align: center;
+                        @include box(45px, 39px, null);
+                        @include font-style(15px, 600, 1.2, $red, $letterspace);
+                    }
+                }
+            }
+            p {
+                text-shadow: 0px 0px 5px black;
+                text-align: center;
+                @include box(150%, auto, null);
+                @include absl(null, null, -43%, 50%);
+                @include translateX(-50%);
+            }
+            &:after {
+                content: '';
+                display: block;
+                background: url(../asset/svg/curve.svg) no-repeat left top;
+                @include absl(4px, null, null, 45px);
+                @include box(65px, 52px, null);
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+        li:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    a.finish {
+        @include btn(95px, 95px);
+        @include border-radius(100%);
+        display: inline-block;
+        position: relative;
+        span {
+            @include box(80px, 80px, $red);
+            @include border-radius(100%);
+            @include font-style(17px, 600, 1.2, white, $letterspace);
+            display: block;
+            text-align: center;
+            padding: 18px 20px 0;
+        }
+        svg {
+            .shape {
+                stroke: $red;
+            }
+        }
+    }
+    a.no {
+        @include grayscale(1);
+        cursor: default;
+        &:hover {
+            svg {
+                .shape {
+                    stroke-width: 3px;
+                    stroke-dasharray: 100 8;
+                    stroke-dashoffset: 20;
+                }
+            }
+        }
+    }
+    ul,
+    a.finish {
+        vertical-align: middle;
+    } //media
+    @media screen and (max-width: 600px) {
+        @include absl(null, null, 11%, 50%);
+        position: fixed;
+        ul {
+            li {
+                margin: 0 3px;
+                &:after {
+                    @include scale(0.9, 1.4);
+                    @include absl(15px, null, null, 41px);
+                    @include box(48px, 59px, null);
+                }
+                p {
+                    @include font-style(13px, 400, $lineheight, white, $letterspace);
+                }
+            }
+        }
+    } // iphone6
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+        @include absl(null, null, 12%, 50%);
+        position: fixed;
+    } // iphone5
+    @media screen and (max-width: 374px) {
+        @include absl(null, null, 10%, 50%);
+        @include simple-transform($scale: 0.8, $rotate: false, $trans-x: -50%, $trans-y: false, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+        position: fixed;
+    }
+}
+
+//分店列表
+aside {
+    @include box(45px, 613px, null);
+    @include absl(120px, null, null, 2%);
+    background: url(../img/storelist.png) no-repeat center center;
+    position: absolute;
+    z-index: 501;
+    ul {
+        li {
+            @include box(45px, 40px, null);
+            position: relative;
+            a {
+                @include box(15px, 15px, white);
+                @include border-radius(100%);
+                display: block;
+                position: absolute;
+                top: 0;
+                span {
+                    @include absl(-7px, null, null, -10px);
+                    @include box(175px, 28px, white);
+                    @include border-radius(14px);
+                    @include opacity(0);
+                    @include transition(.5s ease-out);
+                    @include font-style(13px, 400, 28px, black, $letterspace);
+                    text-align: left;
+                    padding-left: 35px;
+                }
+                &:hover {
+                    span {
+                        @include opacity(1);
+                    }
+                }
+            }
+            a.focus {
+                span {
+                    @include opacity(1);
+                }
+            }
+            .s_1 {
+                left: 10px;
+            }
+            .s_2 {
+                left: 22px;
+            }
+            .s_3 {
+                left: 7px;
+            }
+            .s_4 {
+                left: 21px;
+            }
+            .s_5 {
+                left: 1px;
+            }
+            .s_6 {
+                left: 17px;
+            }
+            .s_7 {
+                left: 10px;
+            }
+            .s_8 {
+                left: 23px;
+            }
+            .s_9 {
+                left: 5px;
+            }
+            .s_10 {
+                left: 14px;
+            }
+            .s_11 {
+                left: 29px;
+            }
+            .s_12 {
+                left: 15px;
+            }
+            .s_13 {
+                left: 2px;
+            }
+            .s_14 {
+                left: 16px;
+            }
+            .s_15 {
+                left: 28px;
+            }
+            .s_16 {
+                left: 10px;
+            }
+        }
+    } //media
+    @media screen and (max-width: 1366px) {
+        @include absl(50%, null, null, 2%);
+        @include simple-transform($scale: 0.9, $rotate: false, $trans-x: false, $trans-y: -50%, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+    }
+    @media screen and (max-width: 1024px) {
+        @include absl(50%, null, null, 2%);
+        @include simple-transform($scale: 0.8, $rotate: false, $trans-x: false, $trans-y: -50%, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+    }
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+    @media only screen and (max-height: 750px) {
+        @include absl(50%, null, null, 2%);
+        @include simple-transform($scale: 0.8, $rotate: false, $trans-x: false, $trans-y: -50%, $skew-x: false, $skew-y: false, $origin-x: 0, $origin-y: 0);
+        margin-top: 25px;
+    }
+}
+
+//店家列表
+.store_list {
+    display: none;
+    @include box(100%, 50px, $red);
+    @include absl(null, null, 0px, 0px);
+    position: fixed;
+    z-index: 501;
+    font-size: 0;
+    letter-spacing: 0;
+    a {
+        @include font-style(16px, $weight, 50px, $fontcolor, $letterspace);
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+    a.location {
+        @include box(50px, 50px, white);
+        @include font-style(20px, null, null, $red, null); // border-right: 1px solid white;
+    }
+    >p {
+        @include box(calc(100% - 50px), 50px, $red);
+        @include font-style(16px, $weight, 50px, $fontcolor, $letterspace);
+        vertical-align: middle;
+        display: inline-block;
+        a {
+            @include box(50%, 50px, null);
+            display: block;
+            float: left;
+            span {
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                padding-left: 20px;
+                @include box(null, 50px, null);
+                &:before,
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    @include box(12px, 4px, white);
+                    @include translateY(-50%);
+                    @include absl(50%, null, null, null);
+                    @include border-radius(2px);
+                }
+                &:before {
+                    @include rotate(-45deg);
+                }
+                &:after {
+                    @include rotate(-135deg);
+                    margin-top: -6px;
+                }
+            }
+        }
+        a:first-child {
+            border-right: 1px solid white;
+            span {
+                transform: scaleX(-1);
+                filter: FlipH;
+            }
+        }
+    }
+    .name {
+        @include absl(0, null, null, 0);
+        @include box(100%, 100%, $red);
+        padding: 70px 0;
+        position: fixed;
+        z-index: 502;
+        overflow: auto;
+        text-align: center;
+        p.area {
+            @include font-style(20px, 600, 50px, white, $letterspace);
+            text-align: left;
+            padding: 0 30px;
+            position: relative;
+            &:after {
+                content: '';
+                display: inline-block;
+                @include box(70%, 1px, white);
+                @include absl(25px, null, null, 80px);
+            }
+        }
+    } //media
+    @media screen and (max-width: 600px) {
+        display: block;
+    }
+}
+
+//pop 店員介紹
+.pop {
+    @include box(600px, 500px, white);
+    @include border-radius(20px);
+    @include allcenter;
+    z-index: 510;
+    padding-bottom: 30px;
+    overflow: hidden;
+    .red_bar {
+        @include box(100%, 130px, $red);
+        background: url(../asset/svg/wave.svg) repeat-x bottom center $red;
+    }
+    .con {
+        margin-top: -90px;
+        text-align: center;
+    }
+    .photo_block,
+    .des_block {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .photo_block {
+        @include box(300px, 300px, white);
+        @include img-scale;
+        position: relative;
+        ul {
+            @include absl(null, 10px, 10px, null);
+            li {
+                display: inline-block;
+                margin: 0 3px;
+                vertical-align: middle;
+                a {
+                    display: block;
+                    text-align: center;
+                    @include font-style(14px, 400, 20px, $red, $letterspace);
+                    @include box(20px, 20px, white);
+                    @include border-radius(10px);
+                }
+                a.focus {
+                    @include font-style(14px, 400, 20px, white, $letterspace);
+                    @include box(50px, 20px, $red);
+                    @include border-radius(10px);
+                }
+            }
+        }
+        p {
+            @include absl(15px, null, null, -32px);
+            @include box(120px, auto, $red);
+            @include font-style(15px, 400, $lineheight, white, $letterspace);
+            @include rotate(-45deg);
+            padding: 0px 20px;
+        }
+    }
+    .des_block {
+        @include box(220px, auto, null);
+        text-align: center;
+        margin-left: 10px;
+        h1 {
+            @include font-style(25px, 600, $lineheight, white, $letterspace);
+            margin-top: 10px;
+            margin-bottom: 40px;
+            span {
+                display: block;
+                @include font-style(14px, 400, $lineheight, white, $letterspace);
+            }
+        }
+        h2 {
+            @include box(100%, auto, null);
+            @include font-style(15px, 400, $lineheight, black, $letterspace);
+            position: relative;
+            padding: 20px;
+            &:before {
+                content: '“';
+                display: block;
+                @include font-style(30px, 600, $lineheight, $red, $letterspace);
+                @include absl(0, null, null, -10px);
+            }
+            &:after {
+                content: '”';
+                display: block;
+                @include font-style(30px, 600, $lineheight, $red, $letterspace);
+                @include absl(null, -10px, 0, null);
+            }
+        }
+        p {
+            @include font-style(16px, 600, $lineheight, $red, $letterspace);
+            margin-bottom: 30px;
+        }
+    }
+    a.votebtn {
+        @include btn(173px, 43px);
+        @include font-style(15px, 600, $lineheight, $red, $letterspace);
+        span {
+            @include box(100%, auto, null);
+        }
+        b {
+            @include font-style(15px, 400, $lineheight, $red, $letterspace);
+            padding-right: 5px;
+        }
+        svg {
+            .shape {
+                stroke: $red;
+            }
+        }
+    }
+    .fb_comment {
+        @include box(90%, 120px, null);
+        margin-top: 25px;
+        overflow-y: scroll;
+        padding-right: 10px;
+    }
+    .pop_black {
+        @include absl(0, null, null, 0);
+        @include box(100%, 100%, black);
+        @include opacity(0.4);
+        z-index: 504;
+    } //media
+    @media screen and (max-width: 600px) {
+        @include box(100%, auto, white);
+        @include border-radius(0px);
+        @include absl(0, null, null, 0);
+        @include translateX(0);
+        min-height: 100%;
+        overflow: auto;
+        padding-bottom: 100px;
+        .red_bar {
+            @include box(100%, 220px, $red);
+        }
+        .con {
+            margin-top: -150px;
+        }
+        .photo_block,
+        .des_block {
+            display: block;
+        }
+        .photo_block {
+            @include box(70%, auto, null);
+            margin: 0 auto;
+        }
+        .des_block {
+            @include box(80%, auto, null);
+            margin: 0 auto;
+            h1 {
+                color: $red;
+                margin-bottom: 20px;
+                span {
+                    color: $red;
+                }
+            }
+        }
+        .fb_comment {
+            @include box(90%, auto, null);
+            margin-top: 25px;
+            padding-right: 0px;
+            overflow-y: auto;
+        }
+    }
+}
+
+//投票確認
+.final_check {
+    ul {
+        margin-top: 40px;
+        li {
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+            p {
+                @include box(110px, 110px, null);
+                @include img-scale;
+                @include border-radius(100%);
+                overflow: hidden;
+            }
+            &:before {
+                display: block;
+                @include absl(-30px, null, null, 50%);
+                @include translateX(-50%);
+                @include font-style(15px, 400, $lineheight, white, $letterspace);
+                @include box(100%, auto, null);
+            }
+        }
+        li:nth-of-type(1) {
+            &:before {
+                content: '自營組';
+            }
+        }
+        li:nth-of-type(2) {
+            &:before {
+                content: '專櫃組';
+            }
+        }
+        li:nth-of-type(3) {
+            &:before {
+                content: '警衛清潔組';
+            }
+        }
+    }
+    h1 {
+        @include font-style(18px, 500, $lineheight, black, $letterspace);
+        span {
+            display: block;
+            @include font-style(14px, 400, $lineheight, #666, $letterspace);
+        }
+    }
+    h2 {
+        @include font-style(25px, 600, $lineheight, white, $letterspace);
+        margin-bottom: 100px;
+    }
+    h3 {
+        margin-bottom: 30px;
+    }
+    p.machine {
+        @include box(80%, 50px, #f2f0f0);
+        margin: 30px auto 15px;
+    }
+    p.read {
+        @include box(80%, auto, null);
+        margin-bottom: 20px;
+        a {
+            text-decoration: underline;
+            color: black;
+        }
+    } //media
+    @media screen and (max-width: 600px) {
+        .red_bar {
+            @include box(100%, 65px, $red);
+        }
+        a.votebtn {
+            svg {
+                @include scale(1.4);
+            }
+        }
+        ul {
+            @include box(100%, auto, null);
+            margin: 0 auto;
+            margin-top: 180px;
+            li {
+                @include box(65%, auto, null);
+                margin: 20px auto;
+                display: block;
+                text-align: left;
+                p,
+                h1 {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                p {
+                    margin-right: 10px;
+                    position: relative;
+                }
+                h1 {
+                    position: relative;
+                    &:before {
+                        display: block;
+                        @include font-style(15px, 400, $lineheight, $red, $letterspace);
+                    }
+                }
+                &:before {
+                    display: none;
+                }
+            }
+            li:nth-of-type(1) {
+                h1 {
+                    &:before {
+                        content: '自營組';
+                    }
+                }
+            }
+            li:nth-of-type(2) {
+                h1 {
+                    &:before {
+                        content: '專櫃組';
+                    }
+                }
+            }
+            li:nth-of-type(3) {
+                h1 {
+                    &:before {
+                        content: '警衛清潔組';
+                    }
+                }
+            }
+        }
+        h2 {
+            margin-top: 240px;
+            color: $red;
+            margin-bottom: 20px;
+        }
+        h3 {
+            padding: 0 30px;
+        }
+    }
+    @media screen and (max-width: 413px) {
+        ul {
+            li {
+                @include box(70%, auto, null);
+                margin: 10px auto;
+            }
+        }
+    }
+    @media screen and (max-width: 374px) {
+        ul {
+            li {
+                @include box(80%, auto, null);
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+//登入畫面
+.login {
+    @include box(300px, 300px, white);
+    min-height: 0;
+    .red_bar {
+        @include box(100%, 100px, $red);
+        @include font-style(18px, 500, $lineheight, white, $letterspace);
+        text-align: center;
+        padding-top: 35px;
+    }
+    .con {
+        margin-top: 40px;
+    }
+    .login_fb,
+    .login_google {
+        @include btn(173px, 43px);
+        margin: 30px auto;
+        span {
+            @include box(100%, auto, null);
+            b {
+                @include font-style(20px, null, null, null, null);
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+        }
+        svg {
+            @include scale(1.2);
+        }
+    }
+    .login_fb {
+        span {
+            color: #4A679F;
+        }
+        svg {
+            .shape {
+                stroke: #4A679F;
+            }
+        }
+    }
+    .login_google {
+        span {
+            color: #CF5944;
+        }
+        svg {
+            .shape {
+                stroke: #CF5944;
+            }
+        }
+    } //media
+    @media screen and (max-width: 600px) {
+        @include allcenter;
+        @include border-radius(20px);
+        overflow: hidden;
+    }
+}
+
+.black {
+    @include box(100%, 100%, black);
+    @include absl(0, null, null, 0);
+    @include opacity(0.5);
+    position: fixed;
+    z-index: 509;
+}
+
+//裝置警告
+.warn {
+    @include box(100%, 130px, null);
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 550;
+    text-align: center;
+    padding-top: 60px;
+    display: none;
+    p {
+        @include font-style(15px, 500, $lineheight, $red, $letterspace);
+        @include box(100%, auto, null);
+    }
+    a.close {
+        right: 45%;
+        span {
+            &:before,
+            &:after {
+                background-color: $red;
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        display: block;
+    }
+}
+
+//scroll bar
+.fb_comment::-webkit-scrollbar {
+    width: 5px;
+}
+
+.fb_comment::-webkit-scrollbar-track {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+
+.fb_comment::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $red;
+}

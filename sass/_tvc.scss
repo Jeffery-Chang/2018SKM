@@ -1,10 +1,185 @@
 @charset "UTF-8";
-.tvc section{
-	h2{
-		span{
-			display: inline-block;
-			@include box(10px, 10px, white);
-			
-		}
-	}
+.tvc section {
+    h2 {
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 8px 0px 8px 13px;
+            border-color: transparent transparent transparent white;
+            margin: 0 5px;
+            margin-top: -2px;
+        }
+        @media screen and (max-width: 768px) {
+        	br:nth-of-type(2), br:nth-of-type(3){
+        		display: none;
+        	}
+        }
+    }
+    .tvcGroup {
+        ul {
+            text-align: left;
+            li {
+                display: inline-block;
+                position: relative;
+                margin: 20px 25px;
+                a {
+                    @include box(200px, 230px, $red);
+                    @include border-radius(10px);
+                    display: block;
+                    overflow: hidden;
+                }
+                .video,
+                .con {
+                    width: 100%;
+                }
+                .video {
+                    background-color: white;
+                    position: relative;
+                    @include img-scale;
+                    >img {
+                        @include opacity(1);
+                        transition: all .5s ease-in-out;
+                    }
+                    span {
+                        display: inline-block;
+                        @include allcenter;
+                        @include opacity(0);
+                        margin-top: -100px;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+                .con {
+                    position: relative;
+                    @include box(null, 80px, none);
+                    padding-top: 10px;
+                    p.store {
+                        text-align: center;
+                    }
+                    p.share {
+                        @include absl(null, 10px, 10px, null);
+                        @include font-style(14px, null, null, null, null);
+                        span {
+                            display: inline-block;
+                            @include img-scale;
+                            vertical-align: middle;
+                            margin-right: 5px;
+                        }
+                    }
+                    &:before {
+                        display: block;
+                        content: '';
+                        background: url(../asset/svg/wave_nobg.svg) repeat-x;
+                        @include box(100%, 17px, null);
+                        @include absl(-15px, null, null, 0px);
+                    }
+                }
+                .fb {
+                    @include circle(35px);
+                    background-color: #4165AF;
+                    @include absl(8%, -9%, null, null);
+                    @include vm;
+                }
+            }
+            @media screen and (min-width: 769px) {
+                li:hover {
+                    .video {
+                        >img {
+                            @include opacity(0.4);
+                        }
+                        span {
+                            @include opacity(1);
+                            margin-top: 0px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 1030px) {
+                padding: 0 30px;
+                li {
+                    @include box(21.5%, null, null);
+                    margin: 1.5%;
+                    a {
+                        @include box(100%, null, null);
+                    }
+                }
+            }
+            @media screen and (max-width: 900px) {
+                li {
+                    a {
+                        height: 210px;
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+            	padding: 0 15px;
+                li {
+                    @include box(45%, null, null);
+                    margin: 5% 2%;
+                    .video {
+                        >img {
+                            @include opacity(0.4);
+                        }
+                        span {
+                            @include opacity(1);
+                            margin-top: 0px;
+                            width: 18%;
+                            @include img-scale;
+                        }
+                    }
+                    a {
+                        height: auto;
+                    }
+                    .fb{
+                    	right: 3%;
+                    	top: -7%;
+                    }
+                }
+            }
+            @media screen and (max-width: 413px) {
+            	li{
+            		.con{
+            			p.store{
+            				@include font-style(14px, null, null, null, 0px);
+            			}
+            			p.share{
+            				@include font-style(13px, null, null, null, null);
+            			}
+            		}
+            	}
+            }
+            @media screen and (max-width: 374px) {
+            	li{
+            		.con{
+            			p.store{
+            				@include font-style(13px, null, null, null, 0px);
+            			}
+            			p.share{
+            				@include font-style(12px, null, null, null, null);
+            			}
+            		}
+            	}
+            }
+        }
+    }
+}
+
+.tvc {
+    .progress {
+        ul {
+            li:first-child {
+                &:after {
+                    display: block;
+                }
+            }
+            li {
+                a {
+                    color: $red;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
 }

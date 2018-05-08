@@ -87,7 +87,6 @@ var indexCtrl = {
             $('.part1 .btn .shape').toggleClass('shape_border');
         });
 
-
         // all popup關閉
         $('.pop .close, .store_list .close, .warn .close').on('click', function(e){
             menuCtrl.preventAll(e);
@@ -108,7 +107,7 @@ var indexCtrl = {
         $(window).on('resize', function(){
             $this.indexResize();
         }).on('load', function(){
-            $('header, .wrap').css('opacity', 1);
+            $('header, .wrap').removeClass('opacity');
             $this.inStage();
             $this.indexResize();
 

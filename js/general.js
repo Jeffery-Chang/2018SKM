@@ -46,7 +46,7 @@ $(function(){
             });
 
             $(window).on('load', function(){
-                $('header, .wrap').attr('style', '');
+                $('header, .wrap').removeClass('opacity');
                 $('.loading').delay(1000).fadeOut('fast', function(){
                     if(tag !== null){
                         $('html,body').delay(500).stop().animate({

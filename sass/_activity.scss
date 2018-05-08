@@ -1,0 +1,163 @@
+@charset "UTF-8";
+.avtivity{
+    // media
+    @media screen and (max-width: 800px) {
+        .fixed{
+            display: none;
+        }
+    }
+}
+.avtivity section {
+    @include font-style(15px, 400, 1.8, $fontcolor, 2px);
+    padding-bottom: 70px;
+    h2{
+        max-width: 720px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .group {
+        max-width: 800px;
+        width: 100%;
+        margin: 50px auto;
+        article {
+            margin-bottom: 50px;
+            p.sub_topic {
+                position: relative;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                @include font-style(18px, 500, $lineheight, $fontcolor, 2px);
+                &:after {
+                    @include box(100px, 10px, $red);
+                    margin-top: -10px;
+                    content: '';
+                    display: block;
+                }
+            }
+            ul.step {
+                margin: 40px auto 60px;
+                li {
+                    @include box(240px, auto, null);
+                    display: inline-block;
+                    vertical-align: top;
+                    position: relative;
+                    margin: 0 10px;
+                    p {
+                        @include img-scale;
+                        @include box(60%, auto, null);
+                    }
+                    span {
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 0 20px;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        @include box(50px, 4px, white);
+                        @include absl(70px, -37px, null, null);
+                        @include border-radius(2px);
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            ul.list,
+            ul.big_list {
+                margin-top: 40px;
+                text-align: left;
+                margin-left: 25px;
+                @include text-pretty;
+                li {
+                    list-style: decimal;
+                    a {
+                        color: white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            ul.big_list {
+                li {
+                    list-style: upper-alpha;
+                    margin-bottom: 20px;
+                    ul {
+                        margin-left: 25px;
+                        li {
+                            list-style: decimal;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    } // media
+    @media screen and (max-width: 800px) {
+        padding: 70px 30px;
+        .group {
+            article {
+                ul.step {
+                    li {
+                        @include box(85%, auto, null);
+                        margin-bottom: 40px;
+                        p{
+                            @include box(50%, auto, null);
+                        }
+                        span{
+                            padding: 0;
+                        }
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        padding: 50px 30px;
+        h1{
+            width: 100%;
+        }
+        h2{
+            padding: 0;
+        }
+    }
+}
+
+//award
+.avtivity section .award{
+    padding-top: 40px;
+    p{
+        @include font-style(18px, $weight, $lineheight, $fontcolor, $letterspace);
+        background: rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        width: 100%;
+        max-width: 500px;
+        margin: 2px auto;
+        span{
+            display: inline-block;
+            width: 30%;
+            text-align: left;
+        }
+    }
+    ul{
+        margin-top: 40px;
+        @include font-style(14px, 400, $lineheight, $fontcolor, $letterspace);
+        li{
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        p{
+            span{
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
