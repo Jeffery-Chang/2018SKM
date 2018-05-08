@@ -7,7 +7,7 @@
     fjs.parentNode.insertBefore(js, fjs);
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : '1423502524421148',
+            appId      : (location.hostname == 'smileangel.skm.com.tw') ? '1423502524421148' : '164375064234305',
             xfbml      : true,
             version    : 'v2.12'
         });
@@ -44,7 +44,7 @@ var menuCtrl = {
         return result;
     },
     timesUp: function(){
-        var endTime = Date.parse('2018/04/20 00:00:00').valueOf();
+        var endTime = Date.parse('2018/06/20 00:00:00').valueOf();
         var nowTime = Date.parse(new Date()).valueOf();
         var result = nowTime >= endTime;
         return result;

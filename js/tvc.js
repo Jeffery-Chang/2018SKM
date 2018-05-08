@@ -147,7 +147,7 @@ $(function(){
                 $(this).parent('div').fadeOut('fast');
             });
 
-            gapage('');
+            gapage('videolist');
         },
         methods:{
             login(e){
@@ -155,12 +155,12 @@ $(function(){
                 FB.getLoginStatus((response) => {
                     console.log(response.status);
                     if (response.status === 'connected') {
-                        //this.getPageID();
+                        this.getPageID();
                         window.open(url, '_blank');
                     }else{
                         FB.login((response) => {
                             console.log(response);
-                            //this.getPageID();
+                            this.getPageID();
                             window.open(url, '_blank');
                         }, {
                             scope: 'public_profile,email'
@@ -194,7 +194,7 @@ $(function(){
                     {"fields":"shares"},
                     (response) => {
                         console.log(response);
-                        count = (response.shares !== undefined) ? response.shares.count : 0;
+                        var count = (response.shares != undefined) ? response.shares.count : 0;
                         this.posts[cnt].count = count;
                         this.posts[cnt].showFG = true;
                     }

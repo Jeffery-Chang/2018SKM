@@ -390,9 +390,10 @@ var indexCtrl = {
         });
 
         // 送出投票>回首頁
+        // 送出投票>看片花
         $('.final_check .beenVote .votebtn').on('click', function(e){
             menuCtrl.preventAll(e);
-            trackWaitJump('ok_goback', 'index.html');
+            trackWaitJump('ok_goback', 'tvc.html');
         });
 
         TweenMax.to($('.roundabout-moveable-item'), .5, {scale: .5, filter: "brightness(30%)", delay: .1});

@@ -37,7 +37,7 @@ $(function(){
 
             $('.final_check .beenVote .votebtn').on('click', function(e){
                 menuCtrl.preventAll(e);
-                trackWaitJump('ok_goback', 'index.html');
+                trackWaitJump('ok_goback', 'tvc.html');
             });
 
             $('.warn .close').on('click', function(e){
@@ -56,7 +56,7 @@ $(function(){
                 });
                 gapi.load("auth2", function(){
                     var auth2 = gapi.auth2.init({
-                        clientId: "704654834388-ta2hrensur0tun55pajn8md8ht02rs2s.apps.googleusercontent.com"
+                        clientId: "704654834388-3cclus6faj1vg3p9lenfdrd8pkbtq2gt.apps.googleusercontent.com"
                     });
 
                     $('.pop.login .login_google').on('click', function(e){
