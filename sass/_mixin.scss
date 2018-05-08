@@ -1,10 +1,11 @@
 // div width & height
+@charset "UTF-8";
 @mixin box($w, $h, $bg) {
     width: $w;
     height: $h;
     background-color: $bg;
     margin: 0 auto;
-    @include box-sizing;
+    box-sizing:border-box;
 }
 
 // image scale with box

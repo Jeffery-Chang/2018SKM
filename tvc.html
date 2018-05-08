@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>新光三越 | 微笑新星爭霸戰</title>
+
+        <!-- facebook share -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="新光三越 | 微笑新星爭霸戰" />
+        <meta property="og:url" content="https://smileangel.skm.com.tw/" />
+        <meta property="og:description" content="歡迎搭乘星際飛船！新光三越天使們正以微笑火熱開戰！8/7~20馬上投票應援喜愛的微笑天使，助他成為最耀眼的微笑新星！再抽iPad mini4！" />
+        <meta property="og:image" content="https://smileangel.skm.com.tw/img/600x315.png" />
+        <meta property="fb:app_id" content="1423502524421148" />
+
+        <!-- favicon -->
+        <link rel="icon" href="img/favicon.ico">
+
+        <!-- css style -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/star.css">
+        <script src="js/vendor/jquery-2.2.0.min.js"></script>
+        <script src="js/vendor/jquery.cookie.min.js"></script>
+        <script src="js/vendor/isMobile.min.js"></script>
+        <script src="js/vendor/TweenMax.min.js"></script>
+        <script src="js/vendor/ga.js"></script>
+        <script src="js/vendor/vue.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!--[if gt IE 9]><script src="js/vendor/html5shiv.js"></script><![endif]-->
+    </head>
+    <body style="min-width: auto;">
+        <!-- loading -->
+        <div class="loading">
+            <div id="container">
+                <div class="ball" id="ball_planet"></div>
+                <div class="smallball" id="wrap1">
+                    <div class="ball" id="ball1"></div>
+                </div>
+                <div class="smallball" id="wrap2">
+                    <div class="ball" id="ball2"></div>
+                </div>
+                <div class="smallball" id="wrap3">
+                    <div class="ball" id="ball3"></div>
+                </div>
+                <div class="smallball" id="wrap4">
+                    <div class="ball" id="ball4"></div>
+                </div>
+            </div>
+        </div>
+        <!-- only fot ipad-->
+        <div class="trans_bg">
+            <div class="trans_ipad">
+                <div class="trans_center"><img src="img/trans/ipad_ok.png">
+                    <p>請將裝置轉至橫式
+                        <br>體驗最佳瀏覽方式</p>
+                </div>
+            </div>
+            <!-- only for iphone-->
+            <div class="trans_iphone">
+                <div class="trans_center"><img src="img/trans/iphone_ok.png">
+                    <p>請將裝置轉至直式
+                        <br>體驗最佳瀏覽方式</p>
+                </div>
+            </div>
+        </div>
+        <!-- navigation -->
+        <header style="display: none;">
+            <p><img src="asset/svg/logo.svg" alt=""></p>
+            <div href="" class="menu">
+                <a href=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">活動首頁</a></li>
+                    <li><a href="">活動辦法</a></li>
+                    <li><a href="">立即投票</a></li>
+                    <li class="none"><a href="">得獎名單</a></li>
+                    <li class="social"><a href=""><span class="icon-facebook"></span></a></li>
+                    <li class="social"><a href=""><span class="icon-google"></span></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="wrap" style="display: none;">
+            <div class="main general">
+                <!-- 其他物件 -->
+                <div class="fixed">
+                    <div class="meteor">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="planet p_1"><img src="asset/svg/planet/01.svg" alt=""></div>
+                    <div class="planet p_2"><img src="asset/svg/planet/05.svg" alt=""></div>
+                    <div class="planet p_3"><img src="asset/svg/planet/03.svg" alt=""></div>
+                    <div class="sha"></div>
+                </div>
+                <!-- 主要內容 -->
+            <section>
+                <h1><img src="asset/svg/maintitle.svg" alt=""></h1>
+                <h2>帶您深入了解每一位微笑新星<br>熱情的、感動的，和您意想不到的每一段小故事！<br>歡迎點擊任一店別播放鈕<span></span>給他們最大的鼓勵！</h2>
+                <!--北部-->
+                <div class="group">
+                    <p class="topic">北部</p>
+                    <div class="tvcGroup">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--中部-->
+                <div class="group">
+                    <p class="topic">中部</p>
+                    <div class="tvcGroup">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--南部-->
+                <div class="group">
+                    <p class="topic">南部</p>
+                    <div class="tvcGroup">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="video">
+                                        <img src="img/tvc_200x150.jpg" alt="">
+                                        <span><img src="asset/svg/play.svg" alt=""></span>
+                                    </div>
+                                    <div class="con">
+                                        <p class="store">台北信義新天地A11</p>
+                                        <p class="share"><span><img src="asset/svg/share.svg" alt=""></span>213 shares</p>
+                                    </div>
+                                </a>
+                                <div class="fb"><span class="icon-facebook"></span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+                <!--進度表-->
+            <div class="progress">
+                <ul>
+                    <li><a href="">北部</a></li>
+                    <li><a href="">中部</a></li>
+                    <li><a href="">南部</a></li>
+                </ul>
+            </div>
+                <div class="bottom_sha"></div>
+            </div>
+
+            <!--裝置警告-->
+            <div class="warn none">
+                <a href="" class="close"><span></span></a>
+                <p>建議使用Safari或Chrome瀏覽網頁，<br>以利活動參與。</p>
+            </div>
+
+            <!--店員介紹-->
+            <transition name="fade">
+                <div class="pop personal" v-show="moreFG">
+                    <div class="pop_black" v-show="innerFG"></div>
+                    <a href="" class="close" @click="closeAll($event)"><span></span></a>
+                    <div class="red_bar"></div>
+                    <div class="con">
+                        <div class="photo_block"><img src="img/store/01_A_03.jpg" alt="">
+                            <ul>
+                                <li><a href="" class="focus">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                            </ul>
+                            <p class="tag">自營組</p>
+                        </div>
+                        <div class="des_block">
+                            <h1>陳思齊<span>台北南西店 / 營業管理</span></h1>
+                            <h2>微笑面對生活<br>微笑面對人生</h2>
+                            <p>目前票數 <span class="vote_cnt">5991</span> 票</p>
+                            <a href="" class="votebtn">
+                                <span><b class="icon-love"></b>投他一票</span>
+                                <svg width="173px" height="43px" viewBox="-2 -2 177 47" stroke-linejoin="round" stroke-linecap="round">
+                                    <path class="shape shape_border" fill="#FFFFFF" d="M151.875,0h-130C9.794,0,0,9.794,0,21.875S9.794,43.75,21.875,43.75h130 c12.081,0,21.875-9.794,21.875-21.875S163.956,0,151.875,0z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="fb_comment"></div>     
+                </div>
+            </transition>
+
+            <!--投票成功-->
+            <transition name="fade">
+                <div class="pop final_check" v-show="voteFG">
+                    <a href="" class="close" @click="closeAll($event, 'vote_go_x')"><span></span></a>
+                    <div class="red_bar"></div>
+                    <!--01-->
+                    <div class="con finalCheck">
+                        <ul>
+                            <li><p><img src="img/store/01_A_01.jpg" alt=""></p><h1>陳思齊<span>台北南西</span></h1></li>
+                            <li><p><img src="img/store/01_A_01.jpg" alt=""></p><h1>陳思齊<span>台北信義新天地A11</span></h1></li>
+                            <li><p><img src="img/store/01_A_01.jpg" alt=""></p><h1>陳思齊<span>台北南西</span></h1></li>
+                        </ul>
+                        <div class="gRobots"><div class="g-recaptcha" data-sitekey="6LfvT1YUAAAAAGCJFOLeHtSzjrYXnMVWB2_b963m"></div></div>
+                        <p class="read">
+                            <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox">
+                            <label for="checkbox-1" class="checkbox-custom-label">我已閱讀並同意<a href="activity.html">活動辦法</a>及<a href="activity.html#auth">個人資料公開授權</a></label>
+                        </p>
+                        <a href="" class="votebtn" @click="finalCheck($event)">
+                            <span><b class="icon-love"></b>確認投票</span>
+                            <svg width="173px" height="43px" viewBox="-2 -2 177 47" stroke-linejoin="round" stroke-linecap="round">
+                                <path class="shape shape_border" fill="#FFFFFF" d="M151.875,0h-130C9.794,0,0,9.794,0,21.875S9.794,43.75,21.875,43.75h130 c12.081,0,21.875-9.794,21.875-21.875S163.956,0,151.875,0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <!--02-->
+                    <div class="con beenVote none">
+                        <h2>您已完成投票!</h2>
+                        <h3>每個FB/G+帳號，一天可投一票，天天投票，中獎機率越高<br>微笑新星們期待您的再訪支持！</h3>
+                        <a href="" class="votebtn">
+                            <span><b class="icon-home"></b>回首頁</span>
+                            <svg width="173px" height="43px" viewBox="-2 -2 177 47" stroke-linejoin="round" stroke-linecap="round">
+                                <path class="shape shape_border" fill="#FFFFFF" d="M151.875,0h-130C9.794,0,0,9.794,0,21.875S9.794,43.75,21.875,43.75h130 c12.081,0,21.875-9.794,21.875-21.875S163.956,0,151.875,0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </transition>
+
+            <!--登入畫面-->
+            <transition name="fade">
+                <div class="pop login" v-show="loginFG">
+                    <a href="" class="close" @click="closeAll($event, 'login_x')"><span></span></a>
+                    <div class="red_bar">請先登入帳號</div>
+                    <div class="con">
+                        <a href="" class="login_fb" @click="fbLogin($event)">
+                            <span><b class="icon-facebook"></b>Facebook登入</span>
+                            <svg width="173px" height="43px" viewBox="-2 -2 177 47" stroke-linejoin="round" stroke-linecap="round">
+                                <path class="shape shape_border" fill="#FFFFFF" d="M151.875,0h-130C9.794,0,0,9.794,0,21.875S9.794,43.75,21.875,43.75h130 c12.081,0,21.875-9.794,21.875-21.875S163.956,0,151.875,0z"/>
+                            </svg>
+                        </a>
+                        <a href="" class="login_google">
+                            <span><b class="icon-google"></b>Google+登入</span>
+                            <svg width="173px" height="43px" viewBox="-2 -2 177 47" stroke-linejoin="round" stroke-linecap="round">
+                                <path class="shape shape_border" fill="#FFFFFF" d="M151.875,0h-130C9.794,0,0,9.794,0,21.875S9.794,43.75,21.875,43.75h130 c12.081,0,21.875-9.794,21.875-21.875S163.956,0,151.875,0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </transition>
+
+            <!--共用黑幕-->
+            <transition name="fade">
+                <div class="black" v-if="closeFG"></div>
+            </transition>
+        </div>
+        <script src="bundle/data.js?v=20170817"></script>
+        <script src="bundle/menu.js?v=20170905"></script>
+        <script src="bundle/general.js?v=20170817"></script>
+    </body>
+</html>

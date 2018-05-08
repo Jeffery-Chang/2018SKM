@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.tvc section{
+	h2{
+		span{
+			display: inline-block;
+			@include box(10px, 10px, white);
+			
+		}
+	}
+}
