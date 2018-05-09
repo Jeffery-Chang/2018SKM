@@ -1,4 +1,4 @@
-$(function(){
+(function(){
     var tvcCtrl = new Vue({
         el: '.wrap',
         data:{
@@ -128,9 +128,7 @@ $(function(){
         mounted(){
             $(window).on('load', function(){
                 $('header, .wrap').removeClass('opacity');
-                $('.loading').delay(500).fadeOut('fast', function(){
-
-                });
+                $('.loading').delay(500).fadeOut('fast');
             });
 
             // 地區按鈕
@@ -208,4 +206,4 @@ $(function(){
             }
         }
     });
-});
+})();

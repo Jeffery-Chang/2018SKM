@@ -17,7 +17,8 @@
 var resizeFG = false;
 var menuCtrl = {
     init: function(){
-        if(location.href.indexOf('https') == -1){
+        /* 2018-05-09 改判斷protocol */
+        if(location.protocol != 'https:'){
             this.chkProtocol();
         }
 

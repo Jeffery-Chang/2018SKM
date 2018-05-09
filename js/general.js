@@ -1,5 +1,5 @@
 (function(a){a.getUrlParam=function(b){var c=new RegExp("(^|&)"+b+"=([^&]*)(&|$)"),d=window.location.search.substr(1).match(c);return null==d?null:unescape(d[2])}})(jQuery);
-$(function(){
+(function(){
     var generalCtrl = new Vue({
         el: '.wrap',
         data: {
@@ -27,6 +27,7 @@ $(function(){
             var $this = this;
             var tag = $.getUrlParam('tag');
 
+            // 組別位移
             $('.progress li').on('click', function(e){
                 menuCtrl.preventAll(e);
                 var index = $(this).index() - 1;
@@ -35,6 +36,7 @@ $(function(){
                 }, 500);
             });
 
+            // 投票成功後按鈕
             $('.final_check .beenVote .votebtn').on('click', function(e){
                 menuCtrl.preventAll(e);
                 trackWaitJump('ok_goback', 'tvc.html');
@@ -54,6 +56,7 @@ $(function(){
                         }, 500);
                     }
                 });
+                // google登入預處理
                 gapi.load("auth2", function(){
                     var auth2 = gapi.auth2.init({
                         clientId: "704654834388-3cclus6faj1vg3p9lenfdrd8pkbtq2gt.apps.googleusercontent.com"
@@ -289,12 +292,12 @@ $(function(){
                 menuCtrl.preventAll(evt);
                 var $this = this;
                 if(!$.cookie('choose1') || !$.cookie('choose2') || !$.cookie('choose3')) return;
-                
+
                 if(menuCtrl.timesUp()){
                     alert('此投票活動已結束，感謝您的熱情參與！');
                     return;
                 }
-                
+
                 var finalObj = $('.finalCheck li');
                 var finalArr = [$.cookie('choose1'), $.cookie('choose2'), $.cookie('choose3')];
 
@@ -325,5 +328,5 @@ $(function(){
                 }
             }
         }
-    });
-});
+    }); 
+})();
