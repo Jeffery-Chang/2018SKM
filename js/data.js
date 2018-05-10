@@ -380,7 +380,7 @@ var profile = [
     {  
         "index":27,
         "store_no":"10",
-        "store_nm":"新竹中華店",
+        "store_nm":"台中中港店",
         "store_tp":"A",
         "name":"劉珮瑜",
         "vote_cnt":0,
@@ -394,7 +394,7 @@ var profile = [
     {  
         "index":28,
         "store_no":"10",
-        "store_nm":"新竹中華店",
+        "store_nm":"台中中港店",
         "store_tp":"B",
         "name":"陳慧竹",
         "vote_cnt":0,
@@ -408,7 +408,7 @@ var profile = [
     {  
         "index":29,
         "store_no":"10",
-        "store_nm":"新竹中華店",
+        "store_nm":"台中中港店",
         "store_tp":"C",
         "name":"許玉蓁",
         "vote_cnt":0,
@@ -422,7 +422,7 @@ var profile = [
     {  
         "index":30,
         "store_no":"11",
-        "store_nm":"台中中港店",
+        "store_nm":"嘉義垂楊店",
         "store_tp":"A",
         "name":"方秀蘭",
         "vote_cnt":0,
@@ -436,7 +436,7 @@ var profile = [
     {  
         "index":31,
         "store_no":"11",
-        "store_nm":"台中中港店",
+        "store_nm":"嘉義垂楊店",
         "store_tp":"B",
         "name":"徐世擁",
         "vote_cnt":0,
@@ -450,7 +450,7 @@ var profile = [
     {  
         "index":32,
         "store_no":"11",
-        "store_nm":"台中中港店",
+        "store_nm":"嘉義垂楊店",
         "store_tp":"C",
         "name":"翁儷芯",
         "vote_cnt":0,
@@ -464,7 +464,7 @@ var profile = [
     {  
         "index":33,
         "store_no":"12",
-        "store_nm":"嘉義垂楊店",
+        "store_nm":"台南中山店",
         "store_tp":"A",
         "name":"許登翔",
         "vote_cnt":0,
@@ -478,7 +478,7 @@ var profile = [
     {  
         "index":34,
         "store_no":"12",
-        "store_nm":"嘉義垂楊店",
+        "store_nm":"台南中山店",
         "store_tp":"B",
         "name":"鄭又瑄",
         "vote_cnt":0,
@@ -492,7 +492,7 @@ var profile = [
     {  
         "index":35,
         "store_no":"12",
-        "store_nm":"嘉義垂楊店",
+        "store_nm":"台南中山店",
         "store_tp":"C",
         "name":"楊桂光",
         "vote_cnt":0,
@@ -506,7 +506,7 @@ var profile = [
     {  
         "index":36,
         "store_no":"13",
-        "store_nm":"台南中山店",
+        "store_nm":"台南新天地",
         "store_tp":"A",
         "name":"許靖苓",
         "vote_cnt":0,
@@ -520,7 +520,7 @@ var profile = [
     {  
         "index":37,
         "store_no":"13",
-        "store_nm":"台南中山店",
+        "store_nm":"台南新天地",
         "store_tp":"B",
         "name":"吳宗龍",
         "vote_cnt":0,
@@ -534,7 +534,7 @@ var profile = [
     {  
         "index":38,
         "store_no":"13",
-        "store_nm":"台南中山店",
+        "store_nm":"台南新天地",
         "store_tp":"C",
         "name":"徐銘謙",
         "vote_cnt":0,
@@ -548,7 +548,7 @@ var profile = [
     {  
         "index":39,
         "store_no":"14",
-        "store_nm":"台南新天地",
+        "store_nm":"高雄三多店",
         "store_tp":"A",
         "name":"楊淑萍",
         "vote_cnt":0,
@@ -562,7 +562,7 @@ var profile = [
     {  
         "index":40,
         "store_no":"14",
-        "store_nm":"台南新天地",
+        "store_nm":"高雄三多店",
         "store_tp":"B",
         "name":"李依容",
         "vote_cnt":0,
@@ -576,7 +576,7 @@ var profile = [
     {  
         "index":41,
         "store_no":"14",
-        "store_nm":"台南新天地",
+        "store_nm":"高雄三多店",
         "store_tp":"C",
         "name":"劉光香",
         "vote_cnt":0,
@@ -590,7 +590,7 @@ var profile = [
     {  
         "index":42,
         "store_no":"15",
-        "store_nm":"高雄三多店",
+        "store_nm":"高雄左營店",
         "store_tp":"A",
         "name":"陳家宏",
         "vote_cnt":0,
@@ -604,7 +604,7 @@ var profile = [
     {  
         "index":43,
         "store_no":"15",
-        "store_nm":"高雄三多店",
+        "store_nm":"高雄左營店",
         "store_tp":"B",
         "name":"蔡秀萍",
         "vote_cnt":0,
@@ -618,7 +618,7 @@ var profile = [
     {  
         "index":44,
         "store_no":"15",
-        "store_nm":"高雄三多店",
+        "store_nm":"高雄左營店",
         "store_tp":"C",
         "name":"陳鍾治琴",
         "vote_cnt":0,
