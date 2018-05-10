@@ -192,7 +192,7 @@
                     {"fields":"shares"},
                     (response) => {
                         console.log(response);
-                        var count = (response.shares != undefined) ? response.shares.count : 0;
+                        var count = (response.hasOwnProperty('shares')) ? response.shares.count : 0;
                         this.posts[cnt].count = count;
                         this.posts[cnt].showFG = true;
                     }
