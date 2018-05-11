@@ -22,7 +22,8 @@ var menuCtrl = {
             this.chkProtocol();
         }
 
-        if(this.chkIE8() === 'IE8'){
+        /* 2018-05-11 現在可以版本哪個版本以下導頁 */
+        if(this.chkIE8() <= 8){
             location.href = 'ie8/';
             return;
         }
@@ -283,23 +284,33 @@ var menuCtrl = {
         return uiwebview || fbWebView || lineWebView;
     },
     chkIE8: function(){
+        /* 2018-05-11 更新判斷IE的方法 */
+        // https://blog.csdn.net/p312011150/article/details/78930823
         var userAgent = navigator.userAgent;
-        var fIEVersion = parseFloat(RegExp["$1"]); 
-
-        if(userAgent.indexOf('MSIE 6.0')!=-1){
-            return "IE6";
-        }else if(fIEVersion == 7){
-            return "IE7";
-        }else if(fIEVersion == 8){
-            return "IE8";
-        }else if(fIEVersion == 9){
-            return "IE9";
-        }else if(fIEVersion == 10){
-            return "IE10";
-        }else if(userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)){ 
-            return "IE11";
+        var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; // 判斷是否IE<11瀏覽器
+        var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; // 判斷是否IE的Edge瀏覽器
+        var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+        if(isIE) {
+            var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+            reIE.test(userAgent);
+            var fIEVersion = parseFloat(RegExp["$1"]);
+            if(fIEVersion == 7) {
+                return 7;
+            }else if(fIEVersion == 8) {
+                return 8;
+            }else if(fIEVersion == 9) {
+                return 9;
+            }else if(fIEVersion == 10) {
+                return 10;
+            }else{
+                return 6; //IE版本 <= 7
+            }   
+        }else if(isEdge) {
+            return 12; // edge
+        }else if(isIE11) {
+            return 11; // IE11  
         }else{
-            return "0"
+            return 13; // 不是ie瀏覽器
         }
     },
     chkProtocol: function(){

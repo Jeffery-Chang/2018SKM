@@ -91,10 +91,12 @@
             $('.pop .close, .store_list .close, .warn .close').on('click', function(e){
                 menuCtrl.preventAll(e);
                 popupOpen = false;
-                var closeClass = $(this).parent('div').attr('class');
+                
+                /* 2018-05-11 改用hasClass方法判斷 */
+                var closeClass = $(this).parent('div');
 
-                if(closeClass.indexOf('login') > -1) gaclick('login_x');
-                if(closeClass.indexOf('final_check') > -1) gaclick('vote_go_x');
+                if(closeClass.hasClass('login')) gaclick('login_x');
+                if(closeClass.hasClass('final_check')) gaclick('vote_go_x');
 
                 $(this).parent('div').fadeOut('fast', function(){
                     $('.store_list').css('z-index', 501);
@@ -254,10 +256,9 @@
             $this.checkChoose();
             $this.setProfile(store_number);
 
+            /* 2018-05-11 整合成一行程式碼 */
             $.each(profile, function(key, obj){
-                $.preload(obj.img2);
-                $.preload(obj.img3);
-                $.preload(obj.img4);
+                $.preload(obj.img2, obj.img3, obj.img4);
             });
 
             $('aside.part2').removeClass('none');
@@ -308,11 +309,11 @@
                 var index = $(this).index();
                 /*var thisClass = $(this).parent('ul').attr('class');
 
-            if(thisClass === 'center'){
-                index = $(this).index() + $('.north li').size();
-            }else if(thisClass === 'south'){
-                index = $(this).index() + $('.north li, .center li').size();
-            }*/
+                if(thisClass === 'center'){
+                    index = $(this).index() + $('.north li').size();
+                }else if(thisClass === 'south'){
+                    index = $(this).index() + $('.north li, .center li').size();
+                }*/
 
                 $('.store_list').css('z-index', 501);
                 $('.store_list .name').fadeOut('fast', function(){
@@ -390,7 +391,7 @@
             });
 
             // 送出投票>回首頁
-            // 送出投票>看片花
+            /* 2018-05-09 送出投票 > 看片花 */
             $('.final_check .beenVote .votebtn').on('click', function(e){
                 menuCtrl.preventAll(e);
                 trackWaitJump('ok_goback', 'tvc.html');
