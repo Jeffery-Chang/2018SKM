@@ -91,7 +91,7 @@
             $('.pop .close, .store_list .close, .warn .close').on('click', function(e){
                 menuCtrl.preventAll(e);
                 popupOpen = false;
-                
+
                 /* 2018-05-11 改用hasClass方法判斷 */
                 var closeClass = $(this).parent('div');
 
@@ -219,12 +219,12 @@
                 var focus = planetObj.roundabout("getChildInFocus");
                 if(wheelPos == "down") {
                     var downFocus = focus + 1;
-                    if(downFocus >= 16) downFocus = 0;
+                    if(downFocus >= 15) downFocus = 0;
                     TweenMax.to($('.roundabout-moveable-item').eq(downFocus), .5, {scale: 1, filter: "brightness(100%)"});
                     TweenMax.to($('.roundabout-in-focus'), .5, {scale: .5, filter: "brightness(30%)"});
                 }else if(wheelPos == "top"){
                     var topFocus = focus - 1;
-                    if(topFocus <= -1) topFocus = 15;
+                    if(topFocus <= -1) topFocus = 14;
                     TweenMax.to($('.roundabout-moveable-item').eq(topFocus), .5, {scale: 1, filter: "brightness(100%)"});
                     TweenMax.to($('.roundabout-in-focus'), .5, {scale: .5, filter: "brightness(30%)"});
                 }
@@ -285,15 +285,18 @@
             });
 
             // 上下顆星球
+            /* 2018-05-15 優化星球移動 */
             $('.store_list p a:eq(0)').on('click', function(e){
                 menuCtrl.preventAll(e);
                 wheelPos = "top";
-                planetObj.roundabout('animateToPreviousChild');
+                // planetObj.roundabout('animateToPreviousChild');
+                $this.movePlanet(wheelPos);
             });
             $('.store_list p a:eq(1)').on('click', function(e){
                 menuCtrl.preventAll(e);
                 wheelPos = "down";
-                planetObj.roundabout('animateToNextChild');
+                // planetObj.roundabout('animateToNextChild');
+                $this.movePlanet(wheelPos);
             });
 
             // 開店別 for mobile
@@ -574,15 +577,18 @@
                 if(popupOpen || resizeFG) return;
                 timer = window.setTimeout(function() {
                     e = e || window.event;
-                    if(e.wheelDelta <= 0 || e.detail > 0){
-                        wheelPos = "down";
-                        planetObj.roundabout('animateToNextChild');
-                    }else{
-                        wheelPos = "top";
-                        planetObj.roundabout('animateToPreviousChild');
-                    }
+                    wheelPos = (e.wheelDelta <= 0 || e.detail > 0) ? "down" : "top";
+                    $this.movePlanet(wheelPos);
                 }, 250);
             }
+        },
+        movePlanet: function(dir){
+            /* 2018-05-15 優化星球移動，由這個function統一判斷 */
+            var focus = planetObj.roundabout("getChildInFocus");
+            focus = (dir == 'top') ? focus - 1 : focus + 1;
+            if(focus >= 15) focus = 0;
+            if(focus <= -1) focus = 14;
+            planetObj.roundabout('animateToChild', focus);
         }
     }
     indexCtrl.init();

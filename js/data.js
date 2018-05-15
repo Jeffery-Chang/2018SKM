@@ -81,7 +81,7 @@ var profile = [
         "img1":"img/store/02_C_01.jpg",
         "img2":"img/store/02_C_02.jpg",
         "img3":"img/store/02_C_03.jpg",
-        "img4":"img/store/02_C_04.jpg"
+        "img4":""
     },
     {  
         "index":6,
@@ -109,7 +109,7 @@ var profile = [
         "img1":"img/store/03_B_01.jpg",
         "img2":"img/store/03_B_02.jpg",
         "img3":"img/store/03_B_03.jpg",
-        "img4":""
+        "img4":"img/store/03_B_04.jpg"
     },
     {  
         "index":8,
@@ -193,7 +193,7 @@ var profile = [
         "img1":"img/store/05_B_01.jpg",
         "img2":"img/store/05_B_02.jpg",
         "img3":"img/store/05_B_03.jpg",
-        "img4":""
+        "img4":"img/store/05_B_04.jpg"
     },
     {  
         "index":14,
@@ -263,7 +263,7 @@ var profile = [
         "img1":"img/store/07_A_01.jpg",
         "img2":"img/store/07_A_02.jpg",
         "img3":"img/store/07_A_03.jpg",
-        "img4":""
+        "img4":"img/store/07_A_04.jpg"
     },
     {  
         "index":19,
@@ -319,7 +319,7 @@ var profile = [
         "img1":"img/store/08_B_01.jpg",
         "img2":"img/store/08_B_02.jpg",
         "img3":"img/store/08_B_03.jpg",
-        "img4":""
+        "img4":"img/store/08_B_04.jpg"
     },
     {  
         "index":23,
@@ -375,7 +375,7 @@ var profile = [
         "img1":"img/store/09_C_01.jpg",
         "img2":"img/store/09_C_02.jpg",
         "img3":"img/store/09_C_03.jpg",
-        "img4":""
+        "img4":"img/store/09_C_04.jpg"
     },
     {  
         "index":27,
@@ -473,7 +473,7 @@ var profile = [
         "img1":"img/store/12_A_01.jpg",
         "img2":"img/store/12_A_02.jpg",
         "img3":"img/store/12_A_03.jpg",
-        "img4":""
+        "img4":"img/store/12_A_04.jpg"
     },
     {  
         "index":34,
@@ -557,7 +557,7 @@ var profile = [
         "img1":"img/store/14_A_01.jpg",
         "img2":"img/store/14_A_02.jpg",
         "img3":"img/store/14_A_03.jpg",
-        "img4":""
+        "img4":"img/store/14_A_04.jpg"
     },
     {  
         "index":40,
@@ -585,7 +585,7 @@ var profile = [
         "img1":"img/store/14_C_01.jpg",
         "img2":"img/store/14_C_02.jpg",
         "img3":"img/store/14_C_03.jpg",
-        "img4":""
+        "img4":"img/store/14_C_04.jpg"
     },
     {  
         "index":42,
