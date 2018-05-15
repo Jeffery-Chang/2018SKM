@@ -1,3 +1,10 @@
+function guid() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    }
+    return s4() + s4();
+}
+var GUID = '?v=' + guid();
 var profile = [  
     {  
         "index":0,
@@ -8,10 +15,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"這世界燦爛的不是陽光，而是微笑。",
         "career_nm":"營業管理",
-        "img1":"img/store/01_A_01.jpg",
-        "img2":"img/store/01_A_02.jpg",
-        "img3":"img/store/01_A_03.jpg",
-        "img4":"img/store/01_A_04.jpg"
+        "img1":"img/store/01_A_01.jpg"+GUID,
+        "img2":"img/store/01_A_02.jpg"+GUID,
+        "img3":"img/store/01_A_03.jpg"+GUID,
+        "img4":"img/store/01_A_04.jpg"+GUID
     },
     {  
         "index":1,
@@ -22,10 +29,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是最好的保養品喔！笑一個喔！",
         "career_nm":"鼎泰豐",
-        "img1":"img/store/01_B_01.jpg",
-        "img2":"img/store/01_B_02.jpg",
-        "img3":"img/store/01_B_03.jpg",
-        "img4":"img/store/01_B_04.jpg"
+        "img1":"img/store/01_B_01.jpg"+GUID,
+        "img2":"img/store/01_B_02.jpg"+GUID,
+        "img3":"img/store/01_B_03.jpg"+GUID,
+        "img4":"img/store/01_B_04.jpg"+GUID
     },
     {  
         "index":2,
@@ -36,10 +43,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑向陽光一樣溫暖人心。",
         "career_nm":"清潔人員",
-        "img1":"img/store/01_C_01.jpg",
-        "img2":"img/store/01_C_02.jpg",
-        "img3":"img/store/01_C_03.jpg",
-        "img4":"img/store/01_C_04.jpg"
+        "img1":"img/store/01_C_01.jpg"+GUID,
+        "img2":"img/store/01_C_02.jpg"+GUID,
+        "img3":"img/store/01_C_03.jpg"+GUID,
+        "img4":"img/store/01_C_04.jpg"+GUID
     },
     {  
         "index":3,
@@ -50,10 +57,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑掛在臉上，服務記在心裡。",
         "career_nm":"營業管理",
-        "img1":"img/store/02_A_01.jpg",
-        "img2":"img/store/02_A_02.jpg",
-        "img3":"img/store/02_A_03.jpg",
-        "img4":"img/store/02_A_04.jpg"
+        "img1":"img/store/02_A_01.jpg"+GUID,
+        "img2":"img/store/02_A_02.jpg"+GUID,
+        "img3":"img/store/02_A_03.jpg"+GUID,
+        "img4":"img/store/02_A_04.jpg"+GUID
     },
     {  
         "index":4,
@@ -64,10 +71,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑服務每一天。",
         "career_nm":"蕾黛絲",
-        "img1":"img/store/02_B_01.jpg",
-        "img2":"img/store/02_B_02.jpg",
-        "img3":"img/store/02_B_03.jpg",
-        "img4":"img/store/02_B_04.jpg"
+        "img1":"img/store/02_B_01.jpg"+GUID,
+        "img2":"img/store/02_B_02.jpg"+GUID,
+        "img3":"img/store/02_B_03.jpg"+GUID,
+        "img4":"img/store/02_B_04.jpg"+GUID
     },
     {  
         "index":5,
@@ -78,9 +85,9 @@ var profile = [
         "vote_cnt":0,
         "service_words":"服務從微笑開始。",
         "career_nm":"警衛人員",
-        "img1":"img/store/02_C_01.jpg",
-        "img2":"img/store/02_C_02.jpg",
-        "img3":"img/store/02_C_03.jpg",
+        "img1":"img/store/02_C_01.jpg"+GUID,
+        "img2":"img/store/02_C_02.jpg"+GUID,
+        "img3":"img/store/02_C_03.jpg"+GUID,
         "img4":""
     },
     {  
@@ -92,10 +99,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑如音樂，律動人們的心靈。",
         "career_nm":"營業管理",
-        "img1":"img/store/03_A_01.jpg",
-        "img2":"img/store/03_A_02.jpg",
-        "img3":"img/store/03_A_03.jpg",
-        "img4":"img/store/03_A_04.jpg"
+        "img1":"img/store/03_A_01.jpg"+GUID,
+        "img2":"img/store/03_A_02.jpg"+GUID,
+        "img3":"img/store/03_A_03.jpg"+GUID,
+        "img4":"img/store/03_A_04.jpg"+GUID
     },
     {  
         "index":7,
@@ -106,10 +113,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"出自真心的笑容足以化解衝突與療癒。",
         "career_nm":"SK-II",
-        "img1":"img/store/03_B_01.jpg",
-        "img2":"img/store/03_B_02.jpg",
-        "img3":"img/store/03_B_03.jpg",
-        "img4":"img/store/03_B_04.jpg"
+        "img1":"img/store/03_B_01.jpg"+GUID,
+        "img2":"img/store/03_B_02.jpg"+GUID,
+        "img3":"img/store/03_B_03.jpg"+GUID,
+        "img4":"img/store/03_B_04.jpg"+GUID
     },
     {  
         "index":8,
@@ -120,10 +127,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是人與人間最好的溝通方式。",
         "career_nm":"清潔人員",
-        "img1":"img/store/03_C_01.jpg",
-        "img2":"img/store/03_C_02.jpg",
-        "img3":"img/store/03_C_03.jpg",
-        "img4":"img/store/03_C_04.jpg"
+        "img1":"img/store/03_C_01.jpg"+GUID,
+        "img2":"img/store/03_C_02.jpg"+GUID,
+        "img3":"img/store/03_C_03.jpg"+GUID,
+        "img4":"img/store/03_C_04.jpg"+GUID
     },
     {  
         "index":9,
@@ -134,10 +141,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"您的滿意就是我的動力！",
         "career_nm":"營業管理",
-        "img1":"img/store/04_A_01.jpg",
-        "img2":"img/store/04_A_02.jpg",
-        "img3":"img/store/04_A_03.jpg",
-        "img4":"img/store/04_A_04.jpg"
+        "img1":"img/store/04_A_01.jpg"+GUID,
+        "img2":"img/store/04_A_02.jpg"+GUID,
+        "img3":"img/store/04_A_03.jpg"+GUID,
+        "img4":"img/store/04_A_04.jpg"+GUID
     },
     {  
         "index":10,
@@ -148,10 +155,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"用微笑來對待每一位顧客，讓他們享有賓至如歸的感覺。",
         "career_nm":"I-PRIMO",
-        "img1":"img/store/04_B_01.jpg",
-        "img2":"img/store/04_B_02.jpg",
-        "img3":"img/store/04_B_03.jpg",
-        "img4":"img/store/04_B_04.jpg"
+        "img1":"img/store/04_B_01.jpg"+GUID,
+        "img2":"img/store/04_B_02.jpg"+GUID,
+        "img3":"img/store/04_B_03.jpg"+GUID,
+        "img4":"img/store/04_B_04.jpg"+GUID
     },
     {  
         "index":11,
@@ -162,10 +169,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"在服務中享受生活，在微笑中體驗快樂。",
         "career_nm":"警衛人員",
-        "img1":"img/store/04_C_01.jpg",
-        "img2":"img/store/04_C_02.jpg",
-        "img3":"img/store/04_C_03.jpg",
-        "img4":"img/store/04_C_04.jpg"
+        "img1":"img/store/04_C_01.jpg"+GUID,
+        "img2":"img/store/04_C_02.jpg"+GUID,
+        "img3":"img/store/04_C_03.jpg"+GUID,
+        "img4":"img/store/04_C_04.jpg"+GUID
     },
     {  
         "index":12,
@@ -176,10 +183,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"沒有最好的服務，只有最貼心的服務。",
         "career_nm":"營業管理",
-        "img1":"img/store/05_A_01.jpg",
-        "img2":"img/store/05_A_02.jpg",
-        "img3":"img/store/05_A_03.jpg",
-        "img4":"img/store/05_A_04.jpg"
+        "img1":"img/store/05_A_01.jpg"+GUID,
+        "img2":"img/store/05_A_02.jpg"+GUID,
+        "img3":"img/store/05_A_03.jpg"+GUID,
+        "img4":"img/store/05_A_04.jpg"+GUID
     },
     {  
         "index":13,
@@ -190,10 +197,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"把客人都當作朋友，真心聆聽，細心服務。",
         "career_nm":"微熱山丘",
-        "img1":"img/store/05_B_01.jpg",
-        "img2":"img/store/05_B_02.jpg",
-        "img3":"img/store/05_B_03.jpg",
-        "img4":"img/store/05_B_04.jpg"
+        "img1":"img/store/05_B_01.jpg"+GUID,
+        "img2":"img/store/05_B_02.jpg"+GUID,
+        "img3":"img/store/05_B_03.jpg"+GUID,
+        "img4":"img/store/05_B_04.jpg"+GUID
     },
     {  
         "index":14,
@@ -204,9 +211,9 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是每天美好的開始，感染著每個和善的心。",
         "career_nm":"警衛人員",
-        "img1":"img/store/05_C_01.jpg",
-        "img2":"img/store/05_C_02.jpg",
-        "img3":"img/store/05_C_03.jpg",
+        "img1":"img/store/05_C_01.jpg"+GUID,
+        "img2":"img/store/05_C_02.jpg"+GUID,
+        "img3":"img/store/05_C_03.jpg"+GUID,
         "img4":""
     },
     {  
@@ -218,10 +225,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"我用100分的笑容，換您十分滿意。",
         "career_nm":"營業管理",
-        "img1":"img/store/06_A_01.jpg",
-        "img2":"img/store/06_A_02.jpg",
-        "img3":"img/store/06_A_03.jpg",
-        "img4":"img/store/06_A_04.jpg"
+        "img1":"img/store/06_A_01.jpg"+GUID,
+        "img2":"img/store/06_A_02.jpg"+GUID,
+        "img3":"img/store/06_A_03.jpg"+GUID,
+        "img4":"img/store/06_A_04.jpg"+GUID
     },
     {  
         "index":16,
@@ -232,10 +239,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑問好，喜迎客到。",
         "career_nm":"CARHARTT",
-        "img1":"img/store/06_B_01.jpg",
-        "img2":"img/store/06_B_02.jpg",
-        "img3":"img/store/06_B_03.jpg",
-        "img4":"img/store/06_B_04.jpg"
+        "img1":"img/store/06_B_01.jpg"+GUID,
+        "img2":"img/store/06_B_02.jpg"+GUID,
+        "img3":"img/store/06_B_03.jpg"+GUID,
+        "img4":"img/store/06_B_04.jpg"+GUID
     },
     {  
         "index":17,
@@ -246,10 +253,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑拉近你我距離，您開心我開心。",
         "career_nm":"警衛人員",
-        "img1":"img/store/06_C_01.jpg",
-        "img2":"img/store/06_C_02.jpg",
-        "img3":"img/store/06_C_03.jpg",
-        "img4":"img/store/06_C_04.jpg"
+        "img1":"img/store/06_C_01.jpg"+GUID,
+        "img2":"img/store/06_C_02.jpg"+GUID,
+        "img3":"img/store/06_C_03.jpg"+GUID,
+        "img4":"img/store/06_C_04.jpg"+GUID
     },
     {  
         "index":18,
@@ -260,10 +267,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"讓微笑帶來快樂，用真誠取得信任！",
         "career_nm":"營業管理",
-        "img1":"img/store/07_A_01.jpg",
-        "img2":"img/store/07_A_02.jpg",
-        "img3":"img/store/07_A_03.jpg",
-        "img4":"img/store/07_A_04.jpg"
+        "img1":"img/store/07_A_01.jpg"+GUID,
+        "img2":"img/store/07_A_02.jpg"+GUID,
+        "img3":"img/store/07_A_03.jpg"+GUID,
+        "img4":"img/store/07_A_04.jpg"+GUID
     },
     {  
         "index":19,
@@ -274,10 +281,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"用陽光般的笑容 融化每一位顧客。",
         "career_nm":"JO MALONE",
-        "img1":"img/store/07_B_01.jpg",
-        "img2":"img/store/07_B_02.jpg",
-        "img3":"img/store/07_B_03.jpg",
-        "img4":"img/store/07_B_04.jpg"
+        "img1":"img/store/07_B_01.jpg"+GUID,
+        "img2":"img/store/07_B_02.jpg"+GUID,
+        "img3":"img/store/07_B_03.jpg"+GUID,
+        "img4":"img/store/07_B_04.jpg"+GUID
     },
     {  
         "index":20,
@@ -288,10 +295,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"我用微笑服務您，您用微笑肯定我。",
         "career_nm":"警衛人員",
-        "img1":"img/store/07_C_01.jpg",
-        "img2":"img/store/07_C_02.jpg",
-        "img3":"img/store/07_C_03.jpg",
-        "img4":"img/store/07_C_04.jpg"
+        "img1":"img/store/07_C_01.jpg"+GUID,
+        "img2":"img/store/07_C_02.jpg"+GUID,
+        "img3":"img/store/07_C_03.jpg"+GUID,
+        "img4":"img/store/07_C_04.jpg"+GUID
     },
     {  
         "index":21,
@@ -302,9 +309,9 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是最美的語言。",
         "career_nm":"接待人員",
-        "img1":"img/store/08_A_01.jpg",
-        "img2":"img/store/08_A_02.jpg",
-        "img3":"img/store/08_A_03.jpg",
+        "img1":"img/store/08_A_01.jpg"+GUID,
+        "img2":"img/store/08_A_02.jpg"+GUID,
+        "img3":"img/store/08_A_03.jpg"+GUID,
         "img4":""
     },
     {  
@@ -316,10 +323,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是兩個人之間最短的距離。",
         "career_nm":"三槍",
-        "img1":"img/store/08_B_01.jpg",
-        "img2":"img/store/08_B_02.jpg",
-        "img3":"img/store/08_B_03.jpg",
-        "img4":"img/store/08_B_04.jpg"
+        "img1":"img/store/08_B_01.jpg"+GUID,
+        "img2":"img/store/08_B_02.jpg"+GUID,
+        "img3":"img/store/08_B_03.jpg"+GUID,
+        "img4":"img/store/08_B_04.jpg"+GUID
     },
     {  
         "index":23,
@@ -330,10 +337,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是跨越國際的語言。",
         "career_nm":"警衛人員",
-        "img1":"img/store/08_C_01.jpg",
-        "img2":"img/store/08_C_02.jpg",
-        "img3":"img/store/08_C_03.jpg",
-        "img4":"img/store/08_C_04.jpg"
+        "img1":"img/store/08_C_01.jpg"+GUID,
+        "img2":"img/store/08_C_02.jpg"+GUID,
+        "img3":"img/store/08_C_03.jpg"+GUID,
+        "img4":"img/store/08_C_04.jpg"+GUID
     },
     {  
         "index":24,
@@ -344,10 +351,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是最能拉近你我間的距離。",
         "career_nm":"營業管理",
-        "img1":"img/store/09_A_01.jpg",
-        "img2":"img/store/09_A_02.jpg",
-        "img3":"img/store/09_A_03.jpg",
-        "img4":"img/store/09_A_04.jpg"
+        "img1":"img/store/09_A_01.jpg"+GUID,
+        "img2":"img/store/09_A_02.jpg"+GUID,
+        "img3":"img/store/09_A_03.jpg"+GUID,
+        "img4":"img/store/09_A_04.jpg"+GUID
     },
     {  
         "index":25,
@@ -358,10 +365,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是最美麗的化妝。",
         "career_nm":"植村秀",
-        "img1":"img/store/09_B_01.jpg",
-        "img2":"img/store/09_B_02.jpg",
-        "img3":"img/store/09_B_03.jpg",
-        "img4":"img/store/09_B_04.jpg"
+        "img1":"img/store/09_B_01.jpg"+GUID,
+        "img2":"img/store/09_B_02.jpg"+GUID,
+        "img3":"img/store/09_B_03.jpg"+GUID,
+        "img4":"img/store/09_B_04.jpg"+GUID
     },
     {  
         "index":26,
@@ -372,10 +379,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"常露微笑，讓客人有賓至如歸的感覺。",
         "career_nm":"警衛人員",
-        "img1":"img/store/09_C_01.jpg",
-        "img2":"img/store/09_C_02.jpg",
-        "img3":"img/store/09_C_03.jpg",
-        "img4":"img/store/09_C_04.jpg"
+        "img1":"img/store/09_C_01.jpg"+GUID,
+        "img2":"img/store/09_C_02.jpg"+GUID,
+        "img3":"img/store/09_C_03.jpg"+GUID,
+        "img4":"img/store/09_C_04.jpg"+GUID
     },
     {  
         "index":27,
@@ -386,10 +393,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"用微笑溫暖周圍的人，用微笑拉近彼此距離。",
         "career_nm":"營業管理",
-        "img1":"img/store/10_A_01.jpg",
-        "img2":"img/store/10_A_02.jpg",
-        "img3":"img/store/10_A_03.jpg",
-        "img4":"img/store/10_A_04.jpg"
+        "img1":"img/store/10_A_01.jpg"+GUID,
+        "img2":"img/store/10_A_02.jpg"+GUID,
+        "img3":"img/store/10_A_03.jpg"+GUID,
+        "img4":"img/store/10_A_04.jpg"+GUID
     },
     {  
         "index":28,
@@ -400,10 +407,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"生活就是要面對；真實的微笑，就是越過障礙。",
         "career_nm":"瓦城",
-        "img1":"img/store/10_B_01.jpg",
-        "img2":"img/store/10_B_02.jpg",
-        "img3":"img/store/10_B_03.jpg",
-        "img4":"img/store/10_B_04.jpg"
+        "img1":"img/store/10_B_01.jpg"+GUID,
+        "img2":"img/store/10_B_02.jpg"+GUID,
+        "img3":"img/store/10_B_03.jpg"+GUID,
+        "img4":"img/store/10_B_04.jpg"+GUID
     },
     {  
         "index":29,
@@ -414,10 +421,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"每一天的微笑可以帶給人歡樂。",
         "career_nm":"警衛人員",
-        "img1":"img/store/10_C_01.jpg",
-        "img2":"img/store/10_C_02.jpg",
-        "img3":"img/store/10_C_03.jpg",
-        "img4":"img/store/10_C_04.jpg"
+        "img1":"img/store/10_C_01.jpg"+GUID,
+        "img2":"img/store/10_C_02.jpg"+GUID,
+        "img3":"img/store/10_C_03.jpg"+GUID,
+        "img4":"img/store/10_C_04.jpg"+GUID
     },
     {  
         "index":30,
@@ -428,10 +435,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是無言的禮貌。",
         "career_nm":"收銀人員",
-        "img1":"img/store/11_A_01.jpg",
-        "img2":"img/store/11_A_02.jpg",
-        "img3":"img/store/11_A_03.jpg",
-        "img4":"img/store/11_A_04.jpg"
+        "img1":"img/store/11_A_01.jpg"+GUID,
+        "img2":"img/store/11_A_02.jpg"+GUID,
+        "img3":"img/store/11_A_03.jpg"+GUID,
+        "img4":"img/store/11_A_04.jpg"+GUID
     },
     {  
         "index":31,
@@ -442,10 +449,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"找到自己最好的微笑，並將它隨時奉獻給客人。",
         "career_nm":"Palladium",
-        "img1":"img/store/11_B_01.jpg",
-        "img2":"img/store/11_B_02.jpg",
-        "img3":"img/store/11_B_03.jpg",
-        "img4":"img/store/11_B_04.jpg"
+        "img1":"img/store/11_B_01.jpg"+GUID,
+        "img2":"img/store/11_B_02.jpg"+GUID,
+        "img3":"img/store/11_B_03.jpg"+GUID,
+        "img4":"img/store/11_B_04.jpg"+GUID
     },
     {  
         "index":32,
@@ -456,10 +463,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是最美的語言。",
         "career_nm":"清潔人員",
-        "img1":"img/store/11_C_01.jpg",
-        "img2":"img/store/11_C_02.jpg",
-        "img3":"img/store/11_C_03.jpg",
-        "img4":"img/store/11_C_04.jpg"
+        "img1":"img/store/11_C_01.jpg"+GUID,
+        "img2":"img/store/11_C_02.jpg"+GUID,
+        "img3":"img/store/11_C_03.jpg"+GUID,
+        "img4":"img/store/11_C_04.jpg"+GUID
     },
     {  
         "index":33,
@@ -470,10 +477,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑在臉，服務在心。",
         "career_nm":"組長",
-        "img1":"img/store/12_A_01.jpg",
-        "img2":"img/store/12_A_02.jpg",
-        "img3":"img/store/12_A_03.jpg",
-        "img4":"img/store/12_A_04.jpg"
+        "img1":"img/store/12_A_01.jpg"+GUID,
+        "img2":"img/store/12_A_02.jpg"+GUID,
+        "img3":"img/store/12_A_03.jpg"+GUID,
+        "img4":"img/store/12_A_04.jpg"+GUID
     },
     {  
         "index":34,
@@ -484,10 +491,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑，是最棒的語言。",
         "career_nm":"碧兒泉",
-        "img1":"img/store/12_B_01.jpg",
-        "img2":"img/store/12_B_02.jpg",
-        "img3":"img/store/12_B_03.jpg",
-        "img4":"img/store/12_B_04.jpg"
+        "img1":"img/store/12_B_01.jpg"+GUID,
+        "img2":"img/store/12_B_02.jpg"+GUID,
+        "img3":"img/store/12_B_03.jpg"+GUID,
+        "img4":"img/store/12_B_04.jpg"+GUID
     },
     {  
         "index":35,
@@ -498,10 +505,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑桂光，為店爭光。",
         "career_nm":"警衛人員",
-        "img1":"img/store/12_C_01.jpg",
-        "img2":"img/store/12_C_02.jpg",
-        "img3":"img/store/12_C_03.jpg",
-        "img4":"img/store/12_C_04.jpg"
+        "img1":"img/store/12_C_01.jpg"+GUID,
+        "img2":"img/store/12_C_02.jpg"+GUID,
+        "img3":"img/store/12_C_03.jpg"+GUID,
+        "img4":"img/store/12_C_04.jpg"+GUID
     },
     {  
         "index":36,
@@ -512,10 +519,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑也能是力量。",
         "career_nm":"組長",
-        "img1":"img/store/13_A_01.jpg",
-        "img2":"img/store/13_A_02.jpg",
-        "img3":"img/store/13_A_03.jpg",
-        "img4":"img/store/13_A_04.jpg"
+        "img1":"img/store/13_A_01.jpg"+GUID,
+        "img2":"img/store/13_A_02.jpg"+GUID,
+        "img3":"img/store/13_A_03.jpg"+GUID,
+        "img4":"img/store/13_A_04.jpg"+GUID
     },
     {  
         "index":37,
@@ -526,10 +533,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是由內而外最好的保養品。",
         "career_nm":"DIOR",
-        "img1":"img/store/13_B_01.jpg",
-        "img2":"img/store/13_B_02.jpg",
-        "img3":"img/store/13_B_03.jpg",
-        "img4":"img/store/13_B_04.jpg"
+        "img1":"img/store/13_B_01.jpg"+GUID,
+        "img2":"img/store/13_B_02.jpg"+GUID,
+        "img3":"img/store/13_B_03.jpg"+GUID,
+        "img4":"img/store/13_B_04.jpg"+GUID
     },
     {  
         "index":38,
@@ -540,10 +547,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"你對生活微笑，生活就對你微笑。",
         "career_nm":"警衛人員",
-        "img1":"img/store/13_C_01.jpg",
-        "img2":"img/store/13_C_02.jpg",
-        "img3":"img/store/13_C_03.jpg",
-        "img4":"img/store/13_C_04.jpg"
+        "img1":"img/store/13_C_01.jpg"+GUID,
+        "img2":"img/store/13_C_02.jpg"+GUID,
+        "img3":"img/store/13_C_03.jpg"+GUID,
+        "img4":"img/store/13_C_04.jpg"+GUID
     },
     {  
         "index":39,
@@ -554,10 +561,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是零距離的問候和最美的語言。",
         "career_nm":"收銀人員",
-        "img1":"img/store/14_A_01.jpg",
-        "img2":"img/store/14_A_02.jpg",
-        "img3":"img/store/14_A_03.jpg",
-        "img4":"img/store/14_A_04.jpg"
+        "img1":"img/store/14_A_01.jpg"+GUID,
+        "img2":"img/store/14_A_02.jpg"+GUID,
+        "img3":"img/store/14_A_03.jpg"+GUID,
+        "img4":"img/store/14_A_04.jpg"+GUID
     },
     {  
         "index":40,
@@ -568,10 +575,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"用微笑來傳遞熱情，拉近你我的心。",
         "career_nm":"SK-II ",
-        "img1":"img/store/14_B_01.jpg",
-        "img2":"img/store/14_B_02.jpg",
-        "img3":"img/store/14_B_03.jpg",
-        "img4":"img/store/14_B_04.jpg"
+        "img1":"img/store/14_B_01.jpg"+GUID,
+        "img2":"img/store/14_B_02.jpg"+GUID,
+        "img3":"img/store/14_B_03.jpg"+GUID,
+        "img4":"img/store/14_B_04.jpg"+GUID
     },
     {  
         "index":41,
@@ -582,10 +589,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑是人與人溝通的橋樑。",
         "career_nm":"清潔人員",
-        "img1":"img/store/14_C_01.jpg",
-        "img2":"img/store/14_C_02.jpg",
-        "img3":"img/store/14_C_03.jpg",
-        "img4":"img/store/14_C_04.jpg"
+        "img1":"img/store/14_C_01.jpg"+GUID,
+        "img2":"img/store/14_C_02.jpg"+GUID,
+        "img3":"img/store/14_C_03.jpg"+GUID,
+        "img4":"img/store/14_C_04.jpg"+GUID
     },
     {  
         "index":42,
@@ -596,10 +603,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"笑容是拉近彼此距離最快的捷徑。",
         "career_nm":"營業管理",
-        "img1":"img/store/15_A_01.jpg",
-        "img2":"img/store/15_A_02.jpg",
-        "img3":"img/store/15_A_03.jpg",
-        "img4":"img/store/15_A_04.jpg"
+        "img1":"img/store/15_A_01.jpg"+GUID,
+        "img2":"img/store/15_A_02.jpg"+GUID,
+        "img3":"img/store/15_A_03.jpg"+GUID,
+        "img4":"img/store/15_A_04.jpg"+GUID
     },
     {  
         "index":43,
@@ -610,10 +617,10 @@ var profile = [
         "vote_cnt":0,
         "service_words":"往臉上放笑容是生活最好的調味。",
         "career_nm":"K-SWISS",
-        "img1":"img/store/15_B_01.jpg",
-        "img2":"img/store/15_B_02.jpg",
-        "img3":"img/store/15_B_03.jpg",
-        "img4":"img/store/15_B_04.jpg"
+        "img1":"img/store/15_B_01.jpg"+GUID,
+        "img2":"img/store/15_B_02.jpg"+GUID,
+        "img3":"img/store/15_B_03.jpg"+GUID,
+        "img4":"img/store/15_B_04.jpg"+GUID
     },
     {  
         "index":44,
@@ -624,9 +631,9 @@ var profile = [
         "vote_cnt":0,
         "service_words":"微笑讓世界變得更美好。",
         "career_nm":"清潔人員",
-        "img1":"img/store/15_C_01.jpg",
-        "img2":"img/store/15_C_02.jpg",
-        "img3":"img/store/15_C_03.jpg",
-        "img4":"img/store/15_C_04.jpg"
+        "img1":"img/store/15_C_01.jpg"+GUID,
+        "img2":"img/store/15_C_02.jpg"+GUID,
+        "img3":"img/store/15_C_03.jpg"+GUID,
+        "img4":"img/store/15_C_04.jpg"+GUID
     }
 ];

@@ -188,7 +188,8 @@
 
                 (profile[key].img4 === '') ? $('.personal .photo_block li:eq(3)').hide() : $('.personal .photo_block li:eq(3)').show();
 
-                $('.personal .photo_block img').attr('src', 'img/store/'+profile[key].store_no+'_'+profile[key].store_tp+'_02.jpg');
+                /* 2018-05-15 改成直接抓路徑不寫死(從第2張開始) */
+                $('.personal .photo_block img').attr('src', profile[key].img2);
                 $('.personal .photo_block li').find('a').removeClass('focus').eq(0).addClass('focus');
 
                 $('.personal .photo_block li').off('click');
@@ -216,7 +217,9 @@
                     TweenMax.to($('.personal .photo_block img'), .3, {
                         opacity: 0,
                         onComplete: function(){
-                            $('.personal .photo_block img').attr('src', 'img/store/'+profile[key].store_no+'_'+profile[key].store_tp+'_0'+index+'.jpg');
+                            /* 2018-05-15 改成直接抓路徑不寫死(從第2張開始) */
+                            // $('.personal .photo_block img').attr('src', 'img/store/'+profile[key].store_no+'_'+profile[key].store_tp+'_0'+index+'.jpg');
+                            $('.personal .photo_block img').attr('src', profile[key]['img'+index]);
                             TweenMax.to($('.personal .photo_block img'), .3, {opacity: 1});
                         }
                     });
