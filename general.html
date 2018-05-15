@@ -115,7 +115,7 @@
                                             <h2>{{ item.name }}</h2>
                                             <h3>{{ item.store_nm }}</h3>
                                             <p>目前票數 <span>{{ item.vote_cnt }}</span> 票</p>
-                                            <a href="" class="btnVote" :class="{ 'choose' : item.chooseFG }" @click="getVote($event)" :index="item.index">
+                                            <a href="" class="btnVote" :class="{ 'choose' : item.chooseFG }" @click="getVote($event, false)" :index="item.index">
                                                 <span><b class="icon-love" v-show="!item.chooseFG"></b>{{ (item.chooseFG) ? '已選取' : '投票' }}</span>
                                                 <svg x="0px" y="0px" width="120px" height="40px" viewBox="-3 -3 126 46">
                                                     <path :class="{ 'shape shape_border' : !item.chooseFG }" fill="#B72224" d="M100,0H20C8.954,0,0,8.954,0,20s8.954,20,20,20h80c11.045,0,20-8.954,20-20S111.045,0,100,0z" stroke-linejoin="round" stroke-linecap="round" />
@@ -144,7 +144,7 @@
                                             <h2>{{ item.name }}</h2>
                                             <h3>{{ item.store_nm }}</h3>
                                             <p>目前票數 <span>{{ item.vote_cnt }}</span> 票</p>
-                                            <a href="" class="btnVote" :class="{ 'choose' : item.chooseFG }" @click="getVote($event)" :index="item.index">
+                                            <a href="" class="btnVote" :class="{ 'choose' : item.chooseFG }" @click="getVote($event, false)" :index="item.index">
                                                 <span><b class="icon-love" v-show="!item.chooseFG"></b>{{ (item.chooseFG) ? '已選取' : '投票' }}</span>
                                                 <svg x="0px" y="0px" width="120px" height="40px" viewBox="-3 -3 126 46">
                                                     <path :class="{ 'shape shape_border' : !item.chooseFG }" fill="#B72224" d="M100,0H20C8.954,0,0,8.954,0,20s8.954,20,20,20h80c11.045,0,20-8.954,20-20S111.045,0,100,0z" stroke-linejoin="round" stroke-linecap="round" />
@@ -173,7 +173,7 @@
                                             <h2>{{ item.name }}</h2>
                                             <h3>{{ item.store_nm }}</h3>
                                             <p>目前票數 <span>{{ item.vote_cnt }}</span> 票</p>
-                                            <a href="" class="btnVote" :class="{ 'choose' : item.chooseFG }" @click="getVote($event)" :index="item.index">
+                                            <a href="" class="btnVote" :class="{ 'choose' : item.chooseFG }" @click="getVote($event, false)" :index="item.index">
                                                 <span><b class="icon-love" v-show="!item.chooseFG"></b>{{ (item.chooseFG) ? '已選取' : '投票' }}</span>
                                                 <svg x="0px" y="0px" width="120px" height="40px" viewBox="-3 -3 126 46">
                                                     <path :class="{ 'shape shape_border' : !item.chooseFG }" fill="#B72224" d="M100,0H20C8.954,0,0,8.954,0,20s8.954,20,20,20h80c11.045,0,20-8.954,20-20S111.045,0,100,0z" stroke-linejoin="round" stroke-linecap="round" />

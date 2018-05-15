@@ -228,7 +228,9 @@
                 // 看更多投他一票click
                 $('.personal .votebtn').on('click', function(e){
                     menuCtrl.preventAll(e);
-                    $this.getVote(evt, true);
+                    /* 2018-05-15 修正內層投票抓不到index的問題 */
+                    $(this).data('index', key);
+                    $this.getVote(e, true);
                 });
 
                 $this.moreFG = true;
@@ -252,7 +254,8 @@
                     obj.chooseFG = false;
                 });
 
-                var key = $(evt.target).parents('.btnVote').attr('index');
+                /* 2018-05-15 修正內層投票抓不到index的問題 */
+                var key = (!inn) ? $(evt.target).parents('.btnVote').attr('index') : $(evt.currentTarget).data('index');
                 this.chkChoose(key);
             },
             chkChoose: function(key){
@@ -278,9 +281,7 @@
                 var chooseList = [choose1, choose2, choose3];
 
                 $.each(chooseList, function(num, obj){
-                    $.each($this.items, function(sort, item){
-                        if(item.index == obj) item.chooseFG = true;
-                    });
+                    if(obj) $this.items[obj].chooseFG = true;
                 });
 
                 (choose1) ? $('.progress .icon-checkmark:eq(0)').removeClass('unfinish') : $('.progress .icon-checkmark:eq(0)').addClass('unfinish');
