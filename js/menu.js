@@ -40,13 +40,13 @@ var menuCtrl = {
         });
     },
     timeStart: function(){
-        var endTime = Date.parse('2018/04/30 00:00:00').valueOf();
+        var endTime = (location.hostname == 'smileangel.skm.com.tw') ? Date.parse('2018/06/05 11:00:00').valueOf() : Date.parse('2018/04/30 00:00:00').valueOf();
         var nowTime = Date.parse(new Date()).valueOf();
         var result = nowTime >= endTime;
         return result;
     },
     timesUp: function(){
-        var endTime = Date.parse('2018/06/20 00:00:00').valueOf();
+        var endTime = Date.parse('2018/06/15 00:00:00').valueOf();
         var nowTime = Date.parse(new Date()).valueOf();
         var result = nowTime >= endTime;
         return result;
