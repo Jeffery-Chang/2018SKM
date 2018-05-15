@@ -99,10 +99,10 @@ var profile = [
         "vote_cnt":0, "chooseFG": false,
         "service_words":"微笑如音樂，律動人們的心靈。",
         "career_nm":"營業管理",
-        "img1":"img/store/03_A_01.jpg"+GUID,
-        "img2":"img/store/03_A_02.jpg"+GUID,
-        "img3":"img/store/03_A_03.jpg"+GUID,
-        "img4":"img/store/03_A_04.jpg"+GUID
+        "img1":"img/store/06_A_01.jpg"+GUID,
+        "img2":"img/store/06_A_02.jpg"+GUID,
+        "img3":"img/store/06_A_03.jpg"+GUID,
+        "img4":"img/store/06_A_04.jpg"+GUID
     },
     {  
         "index":7,
@@ -113,10 +113,10 @@ var profile = [
         "vote_cnt":0, "chooseFG": false,
         "service_words":"出自真心的笑容足以化解衝突與療癒。",
         "career_nm":"SK-II",
-        "img1":"img/store/03_B_01.jpg"+GUID,
-        "img2":"img/store/03_B_02.jpg"+GUID,
-        "img3":"img/store/03_B_03.jpg"+GUID,
-        "img4":"img/store/03_B_04.jpg"+GUID
+        "img1":"img/store/06_B_01.jpg"+GUID,
+        "img2":"img/store/06_B_02.jpg"+GUID,
+        "img3":"img/store/06_B_03.jpg"+GUID,
+        "img4":"img/store/06_B_04.jpg"+GUID
     },
     {  
         "index":8,
@@ -127,10 +127,10 @@ var profile = [
         "vote_cnt":0, "chooseFG": false,
         "service_words":"微笑是人與人間最好的溝通方式。",
         "career_nm":"清潔人員",
-        "img1":"img/store/03_C_01.jpg"+GUID,
-        "img2":"img/store/03_C_02.jpg"+GUID,
-        "img3":"img/store/03_C_03.jpg"+GUID,
-        "img4":"img/store/03_C_04.jpg"+GUID
+        "img1":"img/store/06_C_01.jpg"+GUID,
+        "img2":"img/store/06_C_02.jpg"+GUID,
+        "img3":"img/store/06_C_03.jpg"+GUID,
+        "img4":"img/store/06_C_04.jpg"+GUID
     },
     {  
         "index":9,
@@ -225,10 +225,10 @@ var profile = [
         "vote_cnt":0, "chooseFG": false,
         "service_words":"我用100分的笑容，換您十分滿意。",
         "career_nm":"營業管理",
-        "img1":"img/store/06_A_01.jpg"+GUID,
-        "img2":"img/store/06_A_02.jpg"+GUID,
-        "img3":"img/store/06_A_03.jpg"+GUID,
-        "img4":"img/store/06_A_04.jpg"+GUID
+        "img1":"img/store/03_A_01.jpg"+GUID,
+        "img2":"img/store/03_A_02.jpg"+GUID,
+        "img3":"img/store/03_A_03.jpg"+GUID,
+        "img4":"img/store/03_A_04.jpg"+GUID
     },
     {  
         "index":16,
@@ -239,10 +239,10 @@ var profile = [
         "vote_cnt":0, "chooseFG": false,
         "service_words":"微笑問好，喜迎客到。",
         "career_nm":"CARHARTT",
-        "img1":"img/store/06_B_01.jpg"+GUID,
-        "img2":"img/store/06_B_02.jpg"+GUID,
-        "img3":"img/store/06_B_03.jpg"+GUID,
-        "img4":"img/store/06_B_04.jpg"+GUID
+        "img1":"img/store/03_B_01.jpg"+GUID,
+        "img2":"img/store/03_B_02.jpg"+GUID,
+        "img3":"img/store/03_B_03.jpg"+GUID,
+        "img4":"img/store/03_B_04.jpg"+GUID
     },
     {  
         "index":17,
@@ -253,10 +253,10 @@ var profile = [
         "vote_cnt":0, "chooseFG": false,
         "service_words":"微笑拉近你我距離，您開心我開心。",
         "career_nm":"警衛人員",
-        "img1":"img/store/06_C_01.jpg"+GUID,
-        "img2":"img/store/06_C_02.jpg"+GUID,
-        "img3":"img/store/06_C_03.jpg"+GUID,
-        "img4":"img/store/06_C_04.jpg"+GUID
+        "img1":"img/store/03_C_01.jpg"+GUID,
+        "img2":"img/store/03_C_02.jpg"+GUID,
+        "img3":"img/store/03_C_03.jpg"+GUID,
+        "img4":"img/store/03_C_04.jpg"+GUID
     },
     {  
         "index":18,
