@@ -150,7 +150,9 @@
         methods:{
             login(e){
                 var url = $(e.currentTarget).data('href');
-                FB.getLoginStatus((response) => {
+                window.open(url, '_blank');
+                /* 2018-05-16 先藏起來，不然會無法另開 */
+                /*FB.getLoginStatus((response) => {
                     console.log(response.status);
                     if (response.status === 'connected') {
                         this.getPageID();
@@ -164,7 +166,7 @@
                             scope: 'public_profile,email'
                         });
                     }
-                });
+                });*/
             },
             getPageID(){
                 $.each(this.posts, (key, obj) => {
