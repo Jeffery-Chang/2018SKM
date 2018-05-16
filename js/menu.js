@@ -240,6 +240,7 @@ var menuCtrl = {
             data: data,
             success: function(result){
                 if(result.status == '200'){
+                    $('.final_check .beenVote h2').text('您已完成投票!');
                     $.removeCookie('choose1');
                     $.removeCookie('choose2');
                     $.removeCookie('choose3');

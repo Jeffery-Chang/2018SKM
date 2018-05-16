@@ -1,3 +1,4 @@
+/* 2018-05-16 IIFE讀不到，拉到外面當全域 */
 var fb_login = ($.cookie('fb_login')) ? true : false;
 var gplus_login = ($.cookie('gplus_login')) ? true : false;
 var innerFG = false;
