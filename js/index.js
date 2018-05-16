@@ -1,3 +1,6 @@
+var fb_login = ($.cookie('fb_login')) ? true : false;
+var gplus_login = ($.cookie('gplus_login')) ? true : false;
+var innerFG = false;
 (function(a){a.preload=function(){var c=[],b=arguments.length;for(;b--;){c.push(a("<img />").attr("src",arguments[b]));}};})(jQuery);
 (function(){
     var home1 = $('.part1.earth .house_layer_1');
@@ -25,10 +28,7 @@
 
     var delayTime = .75;
     var wheelPos = "top";
-    var fb_login = ($.cookie('fb_login')) ? true : false;
-    var gplus_login = ($.cookie('gplus_login')) ? true : false;
     var popupOpen = false;
-    var innerFG = false;
 
     var store_fg = false;
     var store_number = 0;
