@@ -235,7 +235,6 @@ var menuCtrl = {
             name: sendName,
             email: sendEmail,
             uid: sendId,
-            type: sendType,
             choose: sendChoose,
             google: pass
         }
