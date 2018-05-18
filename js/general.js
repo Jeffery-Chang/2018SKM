@@ -331,6 +331,12 @@
                     this.closeFG = this.sortFG = this.loginFG = this.moreFG = this.voteFG = false;
                 }
             }
+        },
+        /* 2018-05-18 開popup時body捲軸隱藏 */
+        watch:{
+            closeFG(){
+                document.body.style.overflow = (this.closeFG) ? 'hidden' : '';
+            }
         }
     }); 
 })();
