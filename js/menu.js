@@ -7,9 +7,9 @@
     fjs.parentNode.insertBefore(js, fjs);
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : (location.hostname == 'smileangel.skm.com.tw') ? '1423502524421148' : '164375064234305',
+            appId      : (location.hostname == 'smileangel.skm.com.tw') ? '1423502524421148' : '142220039665931',
             xfbml      : true,
-            version    : 'v2.12'
+            version    : (location.hostname == 'smileangel.skm.com.tw') ? 'v2.12' : 'v2.9',
         });
     };
 }(document, 'script', 'facebook-jssdk'));
