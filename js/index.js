@@ -71,7 +71,7 @@ var innerFG = false;
                 menuCtrl.preventAll(e);
 
                 if(!menuCtrl.timeStart()){
-                    alert('現在投票還沒有開始喔！\n\n請於\n106年 8月  7日（一）11:00～\n106年 8月20日（日）23:59\n\n蒞臨本站一天一票，支持您心目中的候選人！');
+                    alert('現在投票還沒有開始喔！\n\n請於\n107年 6月  5日（二）11:00～\n107年 6月14日（四）23:59\n\n蒞臨本站一天一票，支持您心目中的候選人！');
                     return;
                 }
 

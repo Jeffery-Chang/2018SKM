@@ -40,7 +40,7 @@ var menuCtrl = {
         });
     },
     timeStart: function(){
-        var endTime = (location.hostname == 'smileangel.skm.com.tw') ? Date.parse('2018/06/05 11:00:00').valueOf() : Date.parse('2018/04/30 00:00:00').valueOf();
+        var endTime = (location.hostname == 'smileangel.skm.com.tw'  && 1 == 2 ) ? Date.parse('2018/06/05 11:00:00').valueOf() : Date.parse('2018/04/30 00:00:00').valueOf();
         var nowTime = Date.parse(new Date()).valueOf();
         var result = nowTime >= endTime;
         return result;
@@ -199,7 +199,7 @@ var menuCtrl = {
     sendData: function(cb){
         if (cb === void 0) { cb = null; };
         if(menuCtrl.timesUp()){
-            alert('此投票活動已結束，感謝您的熱情參與！\n\n活動將於106年9月4日(一)抽獎\n得獎通知將於106年9月8日(五)以E-MAIL寄發通知\n\n請您密切注意，謝謝。');
+            alert('此投票活動已結束，感謝您的熱情參與！\n\n活動將於107年6月20日(三)抽獎\n得獎通知將於107年6月21日(四)以E-MAIL寄發通知\n\n請您密切注意，謝謝。');
             return;
         }
 
