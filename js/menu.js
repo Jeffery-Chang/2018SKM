@@ -19,7 +19,7 @@ var menuCtrl = {
     init: function(){
 
         /* 2018-06-05 全都導去正式站 */
-        if(hostname =! '192.168.123.30'){
+        if(location.host == 'smileangelskm.webgene.com.tw'){
             location.href = 'https://smileangel.skm.com.tw';
             return;
         }
