@@ -17,6 +17,13 @@
 var resizeFG = false;
 var menuCtrl = {
     init: function(){
+
+        /* 2018-06-05 全都導去正式站 */
+        if(hostname =! '192.168.123.30'){
+            location.href = 'https://smileangel.skm.com.tw';
+            return;
+        }
+
         /* 2018-05-09 改判斷protocol */
         if(location.protocol != 'https:'){
             this.chkProtocol();
@@ -223,7 +230,7 @@ var menuCtrl = {
         sendEmail = ($.cookie('email')) ? $.cookie('email') : '' ;
         sendId = $.cookie('id');
         sendChoose = $.cookie('choose1') + ',' + $.cookie('choose2') + ',' + $.cookie('choose3');
-        
+
         /* 2018-05-17 為沒有email的fb帳號提示 */
         if(sendType == 'Facebook' && sendEmail == ''){
             alert('注意！\n您的Facebook尚未綁定E-mail信箱，因本活動中獎聯繫是透過E-mail通知，\n未提供E-mail帳號將影響您的獲獎權益！\n建議您可以先將Facebook帳號綁定Email，或改登入Google+再參與投票唷！');

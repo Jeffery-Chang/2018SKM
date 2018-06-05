@@ -5,7 +5,9 @@
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-ga('create', 'UA-54804356-4', 'auto');
+/* 2018-06-05 拿掉GA */
+var ga_code = (location.hostname == 'smileangel.skm.com.tw') ? 'UA-54804356-4' : '';
+ga('create', ga_code, 'auto');
 
 function gapage(page) {
     ga('send', 'pageview', page);
