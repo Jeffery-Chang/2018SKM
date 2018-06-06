@@ -249,7 +249,7 @@ var profile = [
         "store_no":"06",
         "store_nm":"台北信義新天地A11",
         "store_tp":"C",
-        "name":"吳保慧",
+        "name":"李保慧",
         "vote_cnt":0, "chooseFG": false,
         "service_words":"微笑拉近你我距離，您開心我開心。",
         "career_nm":"警衛人員",
