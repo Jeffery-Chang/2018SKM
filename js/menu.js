@@ -35,7 +35,7 @@ var menuCtrl = {
             return;
         }
 
-        if(this.timesUp()) $('header nav li').eq(4).removeClass('none');
+        // if(this.timesUp()) $('header nav li').eq(4).removeClass('none');
         if(this.timeStart()) this.menuSet();
         this.resize();
         this.starSet();

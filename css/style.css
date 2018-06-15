@@ -520,7 +520,7 @@ header {
         display: table;
         margin-top: 12px;
         border-radius: 2.5px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       header .menu {
         display: block; } }
   header .open {
@@ -544,7 +544,7 @@ header {
         position: absolute;
         top: -1px;
         right: 0px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       header .open {
         display: block; } }
   header nav {
@@ -627,9 +627,9 @@ header {
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
-    header nav ul li:nth-of-type(5) {
+    header nav ul li:nth-of-type(6) {
       margin-left: 15px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       header nav {
         width: 100%;
         height: 100%;
