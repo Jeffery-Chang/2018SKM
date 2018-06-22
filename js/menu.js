@@ -34,8 +34,8 @@ var menuCtrl = {
             location.href = 'ie8/';
             return;
         }
-
-        // if(this.timesUp()) $('header nav li').eq(4).removeClass('none');
+        
+        if(this.awardTime()) $('header nav li').eq(4).removeClass('none');
         if(this.timeStart()) this.menuSet();
         this.resize();
         this.starSet();
@@ -54,6 +54,12 @@ var menuCtrl = {
     },
     timesUp: function(){
         var endTime = Date.parse('2018/06/15 00:00:00').valueOf();
+        var nowTime = Date.parse(new Date()).valueOf();
+        var result = nowTime >= endTime;
+        return result;
+    },
+    awardTime(){
+        var endTime = Date.parse('2018/06/21 12:00:00').valueOf();
         var nowTime = Date.parse(new Date()).valueOf();
         var result = nowTime >= endTime;
         return result;
